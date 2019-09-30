@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1bd1ca04-95b0-4db6-b246-132bdbb7c7f4" name="work" comment="work">
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RENAME_ME.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contracts/AceContracts.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contracts/Migrations.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contracts/TestERC20.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ganache.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../migrations/1_initial_migration.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../migrations/2_ace.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../migrations/3_ZkAsset.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scripts/envConfig.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scripts/run.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scripts/tasks/ganache.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scripts/utils/fs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scripts/utils/log.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/demo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../truffle-config.js" beforeDir="false" />
+    </list>
+    <list id="40b16c46-b0f4-4fcb-9331-d518e0dfe1ac" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1RYrzhabvF83T967OmlnCYvVekk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="40b16c46-b0f4-4fcb-9331-d518e0dfe1ac" name="Default Changelist" comment="" />
+      <created>1569855134225</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569855134225</updated>
+    </task>
+    <task id="LOCAL-00001" summary="work">
+      <changelist id="1bd1ca04-95b0-4db6-b246-132bdbb7c7f4" name="work" comment="work" />
+      <created>1569858559368</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1569858559368</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <option name="trackContextForNewChangelist" value="true" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
+  </component>
+</project>
