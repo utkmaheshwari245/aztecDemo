@@ -21,7 +21,6 @@
     "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "@babel/runtime": "^7.4.2",
-    "dotenv": "^7.0.0",
     "solhint": "^2.0.0",
     "solium": "^1.2.3",
     "truffle": "^5.0.33"

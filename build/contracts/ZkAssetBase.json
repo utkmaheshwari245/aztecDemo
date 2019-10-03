@@ -19769,7 +19769,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-09-30T16:01:32.396Z",
+  "updatedAt": "2019-10-03T08:01:42.482Z",
   "devdoc": {
     "author": "AZTEC",
     "details": "A contract defining the standard interface and behaviours of a confidential asset. The ownership values and transfer values are encrypted. Copyright Spilbury Holdings Ltd 2019. All rights reserved.*",

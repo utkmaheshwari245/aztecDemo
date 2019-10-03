@@ -3965,7 +3965,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-09-30T16:01:32.412Z",
+  "updatedAt": "2019-10-03T08:01:42.494Z",
   "devdoc": {
     "author": "AZTEC",
     "details": "A contract which inherits from ZkAsset and includes the definition of the contract owner Copyright Spilbury Holdings Ltd 2019. All rights reserved.*",

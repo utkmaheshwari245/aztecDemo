@@ -2312,7 +2312,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-09-30T16:01:32.422Z",
+  "updatedAt": "2019-10-03T08:01:42.502Z",
   "devdoc": {
     "author": "AZTEC",
     "details": "NoteUtils is a utility library that extracts user-readable information from AZTEC proof outputs.     Specifically, `bytes proofOutput` objects can be extracted from `bytes proofOutputs`,     `bytes proofOutput` and `bytes note` can be extracted into their constituent components,*",

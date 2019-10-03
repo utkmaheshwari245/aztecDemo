@@ -338,22 +338,10 @@
       "links": {},
       "address": "0xB046c7332da38bc9A8A126F642a259fE982B1690",
       "transactionHash": "0xf74c6d83ea3bfe33185fe91f5b04781e280b847fbb44869448cce5a37af683da"
-    },
-    "1569858719052": {
-      "events": {},
-      "links": {},
-      "address": "0x4a4F6F8e49D3e50E1965beB63e25eb2aB9669782",
-      "transactionHash": "0x33433b07d06e62c5b7be0c257e47142c9a71ee513d8540a52be66f43fed15cd4"
-    },
-    "1569859209964": {
-      "events": {},
-      "links": {},
-      "address": "0xc244A70B275665EbD1B0dF351E75C1759a2D3eE8",
-      "transactionHash": "0xaf0c31aba239d1dbf562ece6f6051573fb076e0d3201c8bba280242003e964de"
     }
   },
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-09-30T16:25:21.811Z",
+  "updatedAt": "2019-10-03T08:02:07.912Z",
   "devdoc": {
     "author": "Zachary Williamson, AZTEC",
     "details": "Don't include this as an internal library. This contract uses a static memory table to cache elliptic curve primitives and hashes. Calling this internally from another function will lead to memory mutation and undefined behaviour. The intended use case is to call this externally via `staticcall`. External calls to OptimizedAZTEC can be treated as pure functions as this contract contains no storage and makes no external calls (other than to precompiles) Copyright Spilsbury Holdings Ltd 2019. All rights reserved. We will be releasing AZTEC as an open-source protocol that provides efficient transaction privacy for Ethereum. Our full vision of the protocol includes confidential cross-asset interactions via our family of AZTEC zero-knowledge proofs and the AZTEC token standard, stay tuned for updates!*",
