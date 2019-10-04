@@ -21642,7 +21642,7 @@
     }
   },
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-03T08:02:08.699Z",
+  "updatedAt": "2019-10-04T10:33:29.400Z",
   "devdoc": {
     "author": "AZTEC",
     "details": "ACE validates the AZTEC protocol's family of zero-knowledge proofs, which enables     digital asset builders to construct fungible confidential digital assets according to the AZTEC token standard. Copyright Spilsbury Holdings Ltd 2019. All rights reserved.*",
