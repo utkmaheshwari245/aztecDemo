@@ -103,22 +103,22 @@
   "metadata": "{\"compiler\":{\"version\":\"0.5.4+commit.9549d8ff\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"JOIN_SPLIT_PROOF\",\"outputs\":[{\"name\":\"\",\"type\":\"uint24\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"ZERO_VALUE_NOTE_HASH\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"PUBLIC_RANGE_PROOF\",\"outputs\":[{\"name\":\"\",\"type\":\"uint24\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"PRIVATE_RANGE_PROOF\",\"outputs\":[{\"name\":\"\",\"type\":\"uint24\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"DIVIDEND_PROOF\",\"outputs\":[{\"name\":\"\",\"type\":\"uint24\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"MINT_PROOF\",\"outputs\":[{\"name\":\"\",\"type\":\"uint24\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"BURN_PROOF\",\"outputs\":[{\"name\":\"\",\"type\":\"uint24\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"@aztec/protocol/contracts/interfaces/IAZTEC.sol\":\"IAZTEC\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":500},\"remappings\":[]},\"sources\":{\"@aztec/protocol/contracts/interfaces/IAZTEC.sol\":{\"keccak256\":\"0xbdaabfc0e82e91c5369a514feb0c64da267cc7af3d040e91dc4afcd34253a0ba\",\"urls\":[\"bzzr://ccace1522655c584b3220a8359c9f01c659232b6bec4ee62201fe1e2cc5c5469\"]}},\"version\":1}",
   "bytecode": "0x608060405234801561001057600080fd5b5061015d806100206000396000f3fe608060405234801561001057600080fd5b506004361061007c5760003560e01c806349518b281161005b57806349518b28146100c35780638500e1f8146100cb5780638e526d9b146100d3578063df924625146100db5761007c565b80625bf7321461008157806307616051146100a157806308ae900a146100bb575b600080fd5b6100896100e3565b6040805162ffffff9092168252519081900360200190f35b6100a96100ea565b60408051918252519081900360200190f35b61008961010e565b610089610115565b61008961011c565b610089610123565b61008961012a565b6201010181565b7fcbc417524e52b95c42a4c42d357938497e3d199eb9b4a0139c92551d4000bc3c81565b6201040381565b6201040281565b6201040181565b6201020181565b620103018156fea165627a7a723058206b45486c9f7435b81fb68c3b0cd02214058bc315ce8d04c8f90a856a70085e010029",
   "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061007c5760003560e01c806349518b281161005b57806349518b28146100c35780638500e1f8146100cb5780638e526d9b146100d3578063df924625146100db5761007c565b80625bf7321461008157806307616051146100a157806308ae900a146100bb575b600080fd5b6100896100e3565b6040805162ffffff9092168252519081900360200190f35b6100a96100ea565b60408051918252519081900360200190f35b61008961010e565b610089610115565b61008961011c565b610089610123565b61008961012a565b6201010181565b7fcbc417524e52b95c42a4c42d357938497e3d199eb9b4a0139c92551d4000bc3c81565b6201040381565b6201040281565b6201040181565b6201020181565b620103018156fea165627a7a723058206b45486c9f7435b81fb68c3b0cd02214058bc315ce8d04c8f90a856a70085e010029",
-  "sourceMap": "33:1367:14:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;33:1367:14;;;;;;;",
-  "deployedSourceMap": "33:1367:14:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;33:1367:14;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;353:47;;;:::i;:::-;;;;;;;;;;;;;;;;;;;1284:113;;;:::i;:::-;;;;;;;;;;;;;;;;1008:49;;;:::i;839:50::-;;;:::i;1176:45::-;;;:::i;519:41::-;;;:::i;679:::-;;;:::i;353:47::-;395:5;353:47;:::o;1284:113::-;1331:66;1284:113;:::o;1008:49::-;1052:5;1008:49;:::o;839:50::-;884:5;839:50;:::o;1176:45::-;1216:5;1176:45;:::o;519:41::-;555:5;519:41;:::o;679:::-;715:5;679:41;:::o",
+  "sourceMap": "33:1367:13:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;33:1367:13;;;;;;;",
+  "deployedSourceMap": "33:1367:13:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;33:1367:13;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;353:47;;;:::i;:::-;;;;;;;;;;;;;;;;;;;1284:113;;;:::i;:::-;;;;;;;;;;;;;;;;1008:49;;;:::i;839:50::-;;;:::i;1176:45::-;;;:::i;519:41::-;;;:::i;679:::-;;;:::i;353:47::-;395:5;353:47;:::o;1284:113::-;1331:66;1284:113;:::o;1008:49::-;1052:5;1008:49;:::o;839:50::-;884:5;839:50;:::o;1176:45::-;1216:5;1176:45;:::o;519:41::-;555:5;519:41;:::o;679:::-;715:5;679:41;:::o",
   "source": "pragma solidity >=0.5.0 <0.6.0;\n\ncontract IAZTEC {\n    enum ProofCategory {\n        NULL,\n        BALANCED,\n        MINT,\n        BURN,\n        UTILITY\n    }\n\n    enum NoteStatus {\n        DOES_NOT_EXIST,\n        UNSPENT,\n        SPENT\n    }\n    // proofEpoch = 1 | proofCategory = 1 | proofId = 1\n    // 1 * 256**(2) + 1 * 256**(1) ++ 1 * 256**(0)\n    uint24 public constant JOIN_SPLIT_PROOF = 65793;\n\n    // proofEpoch = 1 | proofCategory = 2 | proofId = 1\n    // (1 * 256**(2)) + (2 * 256**(1)) + (1 * 256**(0))\n    uint24 public constant MINT_PROOF = 66049;\n\n    // proofEpoch = 1 | proofCategory = 3 | proofId = 1\n    // (1 * 256**(2)) + (3 * 256**(1)) + (1 * 256**(0))\n    uint24 public constant BURN_PROOF = 66305;\n\n    // proofEpoch = 1 | proofCategory = 4 | proofId = 2\n    // (1 * 256**(2)) + (4 * 256**(1)) + (2 * 256**(0))\n    uint24 public constant PRIVATE_RANGE_PROOF = 66562;\n\n    // proofEpoch = 1 | proofCategory = 4 | proofId = 3\n    // (1 * 256**(2)) + (4 * 256**(1)) + (2 * 256**(0))\n    uint24 public constant PUBLIC_RANGE_PROOF = 66563;\n\n    // proofEpoch = 1 | proofCategory = 4 | proofId = 1\n    // (1 * 256**(2)) + (4 * 256**(1)) + (2 * 256**(0))\n    uint24 public constant DIVIDEND_PROOF = 66561;\n\n\n    // Hash of a dummy AZTEC note with k = 0 and a = 1\n    bytes32 public constant ZERO_VALUE_NOTE_HASH = 0xcbc417524e52b95c42a4c42d357938497e3d199eb9b4a0139c92551d4000bc3c;\n}\n",
   "sourcePath": "@aztec/protocol/contracts/interfaces/IAZTEC.sol",
   "ast": {
     "absolutePath": "@aztec/protocol/contracts/interfaces/IAZTEC.sol",
     "exportedSymbols": {
       "IAZTEC": [
-        2846
+        2818
       ]
     },
-    "id": 2847,
+    "id": 2819,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2814,
+        "id": 2786,
         "literals": [
           "solidity",
           ">=",
@@ -129,7 +129,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:31:14"
+        "src": "0:31:13"
       },
       {
         "baseContracts": [],
@@ -137,86 +137,86 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2846,
+        "id": 2818,
         "linearizedBaseContracts": [
-          2846
+          2818
         ],
         "name": "IAZTEC",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "IAZTEC.ProofCategory",
-            "id": 2820,
+            "id": 2792,
             "members": [
               {
-                "id": 2815,
+                "id": 2787,
                 "name": "NULL",
                 "nodeType": "EnumValue",
-                "src": "84:4:14"
+                "src": "84:4:13"
               },
               {
-                "id": 2816,
+                "id": 2788,
                 "name": "BALANCED",
                 "nodeType": "EnumValue",
-                "src": "98:8:14"
+                "src": "98:8:13"
               },
               {
-                "id": 2817,
+                "id": 2789,
                 "name": "MINT",
                 "nodeType": "EnumValue",
-                "src": "116:4:14"
+                "src": "116:4:13"
               },
               {
-                "id": 2818,
+                "id": 2790,
                 "name": "BURN",
                 "nodeType": "EnumValue",
-                "src": "130:4:14"
+                "src": "130:4:13"
               },
               {
-                "id": 2819,
+                "id": 2791,
                 "name": "UTILITY",
                 "nodeType": "EnumValue",
-                "src": "144:7:14"
+                "src": "144:7:13"
               }
             ],
             "name": "ProofCategory",
             "nodeType": "EnumDefinition",
-            "src": "55:102:14"
+            "src": "55:102:13"
           },
           {
             "canonicalName": "IAZTEC.NoteStatus",
-            "id": 2824,
+            "id": 2796,
             "members": [
               {
-                "id": 2821,
+                "id": 2793,
                 "name": "DOES_NOT_EXIST",
                 "nodeType": "EnumValue",
-                "src": "189:14:14"
+                "src": "189:14:13"
               },
               {
-                "id": 2822,
+                "id": 2794,
                 "name": "UNSPENT",
                 "nodeType": "EnumValue",
-                "src": "213:7:14"
+                "src": "213:7:13"
               },
               {
-                "id": 2823,
+                "id": 2795,
                 "name": "SPENT",
                 "nodeType": "EnumValue",
-                "src": "230:5:14"
+                "src": "230:5:13"
               }
             ],
             "name": "NoteStatus",
             "nodeType": "EnumDefinition",
-            "src": "163:78:14"
+            "src": "163:78:13"
           },
           {
             "constant": true,
-            "id": 2827,
+            "id": 2799,
             "name": "JOIN_SPLIT_PROOF",
             "nodeType": "VariableDeclaration",
-            "scope": 2846,
-            "src": "353:47:14",
+            "scope": 2818,
+            "src": "353:47:13",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -224,10 +224,10 @@
               "typeString": "uint24"
             },
             "typeName": {
-              "id": 2825,
+              "id": 2797,
               "name": "uint24",
               "nodeType": "ElementaryTypeName",
-              "src": "353:6:14",
+              "src": "353:6:13",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint24",
                 "typeString": "uint24"
@@ -236,14 +236,14 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3635373933",
-              "id": 2826,
+              "id": 2798,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "395:5:14",
+              "src": "395:5:13",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_65793_by_1",
@@ -255,11 +255,11 @@
           },
           {
             "constant": true,
-            "id": 2830,
+            "id": 2802,
             "name": "MINT_PROOF",
             "nodeType": "VariableDeclaration",
-            "scope": 2846,
-            "src": "519:41:14",
+            "scope": 2818,
+            "src": "519:41:13",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -267,10 +267,10 @@
               "typeString": "uint24"
             },
             "typeName": {
-              "id": 2828,
+              "id": 2800,
               "name": "uint24",
               "nodeType": "ElementaryTypeName",
-              "src": "519:6:14",
+              "src": "519:6:13",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint24",
                 "typeString": "uint24"
@@ -279,14 +279,14 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3636303439",
-              "id": 2829,
+              "id": 2801,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "555:5:14",
+              "src": "555:5:13",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_66049_by_1",
@@ -298,11 +298,11 @@
           },
           {
             "constant": true,
-            "id": 2833,
+            "id": 2805,
             "name": "BURN_PROOF",
             "nodeType": "VariableDeclaration",
-            "scope": 2846,
-            "src": "679:41:14",
+            "scope": 2818,
+            "src": "679:41:13",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -310,10 +310,10 @@
               "typeString": "uint24"
             },
             "typeName": {
-              "id": 2831,
+              "id": 2803,
               "name": "uint24",
               "nodeType": "ElementaryTypeName",
-              "src": "679:6:14",
+              "src": "679:6:13",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint24",
                 "typeString": "uint24"
@@ -322,14 +322,14 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3636333035",
-              "id": 2832,
+              "id": 2804,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "715:5:14",
+              "src": "715:5:13",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_66305_by_1",
@@ -341,11 +341,11 @@
           },
           {
             "constant": true,
-            "id": 2836,
+            "id": 2808,
             "name": "PRIVATE_RANGE_PROOF",
             "nodeType": "VariableDeclaration",
-            "scope": 2846,
-            "src": "839:50:14",
+            "scope": 2818,
+            "src": "839:50:13",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -353,10 +353,10 @@
               "typeString": "uint24"
             },
             "typeName": {
-              "id": 2834,
+              "id": 2806,
               "name": "uint24",
               "nodeType": "ElementaryTypeName",
-              "src": "839:6:14",
+              "src": "839:6:13",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint24",
                 "typeString": "uint24"
@@ -365,14 +365,14 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3636353632",
-              "id": 2835,
+              "id": 2807,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "884:5:14",
+              "src": "884:5:13",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_66562_by_1",
@@ -384,11 +384,11 @@
           },
           {
             "constant": true,
-            "id": 2839,
+            "id": 2811,
             "name": "PUBLIC_RANGE_PROOF",
             "nodeType": "VariableDeclaration",
-            "scope": 2846,
-            "src": "1008:49:14",
+            "scope": 2818,
+            "src": "1008:49:13",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -396,10 +396,10 @@
               "typeString": "uint24"
             },
             "typeName": {
-              "id": 2837,
+              "id": 2809,
               "name": "uint24",
               "nodeType": "ElementaryTypeName",
-              "src": "1008:6:14",
+              "src": "1008:6:13",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint24",
                 "typeString": "uint24"
@@ -408,14 +408,14 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3636353633",
-              "id": 2838,
+              "id": 2810,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "1052:5:14",
+              "src": "1052:5:13",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_66563_by_1",
@@ -427,11 +427,11 @@
           },
           {
             "constant": true,
-            "id": 2842,
+            "id": 2814,
             "name": "DIVIDEND_PROOF",
             "nodeType": "VariableDeclaration",
-            "scope": 2846,
-            "src": "1176:45:14",
+            "scope": 2818,
+            "src": "1176:45:13",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -439,10 +439,10 @@
               "typeString": "uint24"
             },
             "typeName": {
-              "id": 2840,
+              "id": 2812,
               "name": "uint24",
               "nodeType": "ElementaryTypeName",
-              "src": "1176:6:14",
+              "src": "1176:6:13",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint24",
                 "typeString": "uint24"
@@ -451,14 +451,14 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3636353631",
-              "id": 2841,
+              "id": 2813,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "1216:5:14",
+              "src": "1216:5:13",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_66561_by_1",
@@ -470,11 +470,11 @@
           },
           {
             "constant": true,
-            "id": 2845,
+            "id": 2817,
             "name": "ZERO_VALUE_NOTE_HASH",
             "nodeType": "VariableDeclaration",
-            "scope": 2846,
-            "src": "1284:113:14",
+            "scope": 2818,
+            "src": "1284:113:13",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -482,10 +482,10 @@
               "typeString": "bytes32"
             },
             "typeName": {
-              "id": 2843,
+              "id": 2815,
               "name": "bytes32",
               "nodeType": "ElementaryTypeName",
-              "src": "1284:7:14",
+              "src": "1284:7:13",
               "typeDescriptions": {
                 "typeIdentifier": "t_bytes32",
                 "typeString": "bytes32"
@@ -494,14 +494,14 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "307863626334313735323465353262393563343261346334326433353739333834393765336431393965623962346130313339633932353531643430303062633363",
-              "id": 2844,
+              "id": 2816,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "1331:66:14",
+              "src": "1331:66:13",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_92165971246229632513940894614738321725087574332939566699235693509244558031932_by_1",
@@ -512,24 +512,24 @@
             "visibility": "public"
           }
         ],
-        "scope": 2847,
-        "src": "33:1367:14"
+        "scope": 2819,
+        "src": "33:1367:13"
       }
     ],
-    "src": "0:1401:14"
+    "src": "0:1401:13"
   },
   "legacyAST": {
     "absolutePath": "@aztec/protocol/contracts/interfaces/IAZTEC.sol",
     "exportedSymbols": {
       "IAZTEC": [
-        2846
+        2818
       ]
     },
-    "id": 2847,
+    "id": 2819,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2814,
+        "id": 2786,
         "literals": [
           "solidity",
           ">=",
@@ -540,7 +540,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:31:14"
+        "src": "0:31:13"
       },
       {
         "baseContracts": [],
@@ -548,86 +548,86 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2846,
+        "id": 2818,
         "linearizedBaseContracts": [
-          2846
+          2818
         ],
         "name": "IAZTEC",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "IAZTEC.ProofCategory",
-            "id": 2820,
+            "id": 2792,
             "members": [
               {
-                "id": 2815,
+                "id": 2787,
                 "name": "NULL",
                 "nodeType": "EnumValue",
-                "src": "84:4:14"
+                "src": "84:4:13"
               },
               {
-                "id": 2816,
+                "id": 2788,
                 "name": "BALANCED",
                 "nodeType": "EnumValue",
-                "src": "98:8:14"
+                "src": "98:8:13"
               },
               {
-                "id": 2817,
+                "id": 2789,
                 "name": "MINT",
                 "nodeType": "EnumValue",
-                "src": "116:4:14"
+                "src": "116:4:13"
               },
               {
-                "id": 2818,
+                "id": 2790,
                 "name": "BURN",
                 "nodeType": "EnumValue",
-                "src": "130:4:14"
+                "src": "130:4:13"
               },
               {
-                "id": 2819,
+                "id": 2791,
                 "name": "UTILITY",
                 "nodeType": "EnumValue",
-                "src": "144:7:14"
+                "src": "144:7:13"
               }
             ],
             "name": "ProofCategory",
             "nodeType": "EnumDefinition",
-            "src": "55:102:14"
+            "src": "55:102:13"
           },
           {
             "canonicalName": "IAZTEC.NoteStatus",
-            "id": 2824,
+            "id": 2796,
             "members": [
               {
-                "id": 2821,
+                "id": 2793,
                 "name": "DOES_NOT_EXIST",
                 "nodeType": "EnumValue",
-                "src": "189:14:14"
+                "src": "189:14:13"
               },
               {
-                "id": 2822,
+                "id": 2794,
                 "name": "UNSPENT",
                 "nodeType": "EnumValue",
-                "src": "213:7:14"
+                "src": "213:7:13"
               },
               {
-                "id": 2823,
+                "id": 2795,
                 "name": "SPENT",
                 "nodeType": "EnumValue",
-                "src": "230:5:14"
+                "src": "230:5:13"
               }
             ],
             "name": "NoteStatus",
             "nodeType": "EnumDefinition",
-            "src": "163:78:14"
+            "src": "163:78:13"
           },
           {
             "constant": true,
-            "id": 2827,
+            "id": 2799,
             "name": "JOIN_SPLIT_PROOF",
             "nodeType": "VariableDeclaration",
-            "scope": 2846,
-            "src": "353:47:14",
+            "scope": 2818,
+            "src": "353:47:13",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -635,10 +635,10 @@
               "typeString": "uint24"
             },
             "typeName": {
-              "id": 2825,
+              "id": 2797,
               "name": "uint24",
               "nodeType": "ElementaryTypeName",
-              "src": "353:6:14",
+              "src": "353:6:13",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint24",
                 "typeString": "uint24"
@@ -647,14 +647,14 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3635373933",
-              "id": 2826,
+              "id": 2798,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "395:5:14",
+              "src": "395:5:13",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_65793_by_1",
@@ -666,11 +666,11 @@
           },
           {
             "constant": true,
-            "id": 2830,
+            "id": 2802,
             "name": "MINT_PROOF",
             "nodeType": "VariableDeclaration",
-            "scope": 2846,
-            "src": "519:41:14",
+            "scope": 2818,
+            "src": "519:41:13",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -678,10 +678,10 @@
               "typeString": "uint24"
             },
             "typeName": {
-              "id": 2828,
+              "id": 2800,
               "name": "uint24",
               "nodeType": "ElementaryTypeName",
-              "src": "519:6:14",
+              "src": "519:6:13",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint24",
                 "typeString": "uint24"
@@ -690,14 +690,14 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3636303439",
-              "id": 2829,
+              "id": 2801,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "555:5:14",
+              "src": "555:5:13",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_66049_by_1",
@@ -709,11 +709,11 @@
           },
           {
             "constant": true,
-            "id": 2833,
+            "id": 2805,
             "name": "BURN_PROOF",
             "nodeType": "VariableDeclaration",
-            "scope": 2846,
-            "src": "679:41:14",
+            "scope": 2818,
+            "src": "679:41:13",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -721,10 +721,10 @@
               "typeString": "uint24"
             },
             "typeName": {
-              "id": 2831,
+              "id": 2803,
               "name": "uint24",
               "nodeType": "ElementaryTypeName",
-              "src": "679:6:14",
+              "src": "679:6:13",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint24",
                 "typeString": "uint24"
@@ -733,14 +733,14 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3636333035",
-              "id": 2832,
+              "id": 2804,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "715:5:14",
+              "src": "715:5:13",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_66305_by_1",
@@ -752,11 +752,11 @@
           },
           {
             "constant": true,
-            "id": 2836,
+            "id": 2808,
             "name": "PRIVATE_RANGE_PROOF",
             "nodeType": "VariableDeclaration",
-            "scope": 2846,
-            "src": "839:50:14",
+            "scope": 2818,
+            "src": "839:50:13",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -764,10 +764,10 @@
               "typeString": "uint24"
             },
             "typeName": {
-              "id": 2834,
+              "id": 2806,
               "name": "uint24",
               "nodeType": "ElementaryTypeName",
-              "src": "839:6:14",
+              "src": "839:6:13",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint24",
                 "typeString": "uint24"
@@ -776,14 +776,14 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3636353632",
-              "id": 2835,
+              "id": 2807,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "884:5:14",
+              "src": "884:5:13",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_66562_by_1",
@@ -795,11 +795,11 @@
           },
           {
             "constant": true,
-            "id": 2839,
+            "id": 2811,
             "name": "PUBLIC_RANGE_PROOF",
             "nodeType": "VariableDeclaration",
-            "scope": 2846,
-            "src": "1008:49:14",
+            "scope": 2818,
+            "src": "1008:49:13",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -807,10 +807,10 @@
               "typeString": "uint24"
             },
             "typeName": {
-              "id": 2837,
+              "id": 2809,
               "name": "uint24",
               "nodeType": "ElementaryTypeName",
-              "src": "1008:6:14",
+              "src": "1008:6:13",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint24",
                 "typeString": "uint24"
@@ -819,14 +819,14 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3636353633",
-              "id": 2838,
+              "id": 2810,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "1052:5:14",
+              "src": "1052:5:13",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_66563_by_1",
@@ -838,11 +838,11 @@
           },
           {
             "constant": true,
-            "id": 2842,
+            "id": 2814,
             "name": "DIVIDEND_PROOF",
             "nodeType": "VariableDeclaration",
-            "scope": 2846,
-            "src": "1176:45:14",
+            "scope": 2818,
+            "src": "1176:45:13",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -850,10 +850,10 @@
               "typeString": "uint24"
             },
             "typeName": {
-              "id": 2840,
+              "id": 2812,
               "name": "uint24",
               "nodeType": "ElementaryTypeName",
-              "src": "1176:6:14",
+              "src": "1176:6:13",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint24",
                 "typeString": "uint24"
@@ -862,14 +862,14 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3636353631",
-              "id": 2841,
+              "id": 2813,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "1216:5:14",
+              "src": "1216:5:13",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_66561_by_1",
@@ -881,11 +881,11 @@
           },
           {
             "constant": true,
-            "id": 2845,
+            "id": 2817,
             "name": "ZERO_VALUE_NOTE_HASH",
             "nodeType": "VariableDeclaration",
-            "scope": 2846,
-            "src": "1284:113:14",
+            "scope": 2818,
+            "src": "1284:113:13",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -893,10 +893,10 @@
               "typeString": "bytes32"
             },
             "typeName": {
-              "id": 2843,
+              "id": 2815,
               "name": "bytes32",
               "nodeType": "ElementaryTypeName",
-              "src": "1284:7:14",
+              "src": "1284:7:13",
               "typeDescriptions": {
                 "typeIdentifier": "t_bytes32",
                 "typeString": "bytes32"
@@ -905,14 +905,14 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "307863626334313735323465353262393563343261346334326433353739333834393765336431393965623962346130313339633932353531643430303062633363",
-              "id": 2844,
+              "id": 2816,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "1331:66:14",
+              "src": "1331:66:13",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_92165971246229632513940894614738321725087574332939566699235693509244558031932_by_1",
@@ -923,11 +923,11 @@
             "visibility": "public"
           }
         ],
-        "scope": 2847,
-        "src": "33:1367:14"
+        "scope": 2819,
+        "src": "33:1367:13"
       }
     ],
-    "src": "0:1401:14"
+    "src": "0:1401:13"
   },
   "compiler": {
     "name": "solc",
@@ -935,7 +935,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-03T08:01:42.497Z",
+  "updatedAt": "2019-10-11T12:45:24.052Z",
   "devdoc": {
     "methods": {}
   },
