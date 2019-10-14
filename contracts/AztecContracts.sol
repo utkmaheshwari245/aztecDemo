@@ -4,6 +4,7 @@ import "@aztec/protocol/contracts/ACE/ACE.sol";
 import "@aztec/protocol/contracts/ACE/validators/joinSplitFluid/JoinSplitFluid.sol";
 import "@aztec/protocol/contracts/ACE/validators/joinSplit/JoinSplit.sol";
 import "@aztec/protocol/contracts/ERC1724/ZkAssetMintable.sol";
+import "@aztec/protocol/contracts/ERC20/ERC20Mintable.sol";
 
 contract AztecContracts
 {
