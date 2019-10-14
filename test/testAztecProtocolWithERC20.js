@@ -43,5 +43,28 @@ contract('Test Aztec Privacy Protocol', accounts => {
         const sendProofSignatures = sendProof.constructSignatures(ZkAssetMintableInstance.address, [alice]);
         const transfer = await ZkAssetMintableInstance.confidentialTransfer(sendProofData, sendProofSignatures);
         console.log('Successfully transferred notes worth 25 from Alice to Bob');
+
+        console.log('Transfer notes worth 25 from Alice to Bob');
+                const bob25Note = await aztec.note.create(bob.publicKey, 25);
+                const sendProof1 = new JoinSplitProof([alice25Note], [bob25Note], accounts[0], 0, accounts[0]);
+                console.log(sendProof1);
+//                const temp1 = await AceInstance.publicApprove(ZkAssetMintableInstance.address, sendProof.hash, 25, {from:accounts[1]});
+                const sendProofData1 = sendProof1.encodeABI(ZkAssetMintableInstance.address);
+                const sendProofSignatures1 = sendProof1.constructSignatures(ZkAssetMintableInstance.address, [alice]);
+                const transfer1 = await ZkAssetMintableInstance.confidentialTransfer(sendProofData1, sendProofSignatures1);
+                console.log('Successfully transferred notes worth 25 from Alice to Bob');
+
+         console.log('Transfer notes worth 25 from Alice to Bob');
+                         const zeroValueNote2 = await aztec.note.create(bob.publicKey, 0);
+                         const sendProof2 = new JoinSplitProof([bob25Note], [zeroValueNote2], accounts[0], 25, accounts[2]);
+                         console.log(sendProof1);
+         //                const temp1 = await AceInstance.publicApprove(ZkAssetMintableInstance.address, sendProof.hash, 25, {from:accounts[1]});
+                         const sendProofData2 = sendProof2.encodeABI(ZkAssetMintableInstance.address);
+                         const sendProofSignatures2 = sendProof2.constructSignatures(ZkAssetMintableInstance.address, [bob]);
+                         const transfer2 = await ZkAssetMintableInstance.confidentialTransfer(sendProofData2, sendProofSignatures2);
+                         console.log('Successfully transferred notes worth 25 from Alice to Bob');
+
+                         console.log('Alice : ' + await ERC20MintableInstance.balanceOf(accounts[1]));
+                                 console.log('Bob : ' + await ERC20MintableInstance.balanceOf(accounts[2]));
     });
 });
