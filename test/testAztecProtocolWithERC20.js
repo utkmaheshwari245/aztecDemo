@@ -29,7 +29,8 @@ contract('Test Aztec Privacy Protocol with ERC20 tokens', accounts => {
         await ERC20MintableInstance.mint(bobEthereumAccount, 0);
         const zeroValueNote = await aztec.note.createZeroValueNote();
         const alice0Note = await aztec.note.create(aliceAztecAccount.publicKey, 0);
-        await ZkAssetMintableInstance.confidentialMint(MINT_PROOF, new MintProof(zeroValueNote, alice0Note, [alice0Note], ZkAssetMintableInstance.address).encodeABI());
+        const mintData = new MintProof(zeroValueNote, alice0Note, [alice0Note], ZkAssetMintableInstance.address).encodeABI()
+        await ZkAssetMintableInstance.confidentialMint(MINT_PROOF, mintData);
 
         console.log('Alice\'s balance : ' + await ERC20MintableInstance.balanceOf(aliceEthereumAccount));
         console.log('Bob\'s balance : ' + await ERC20MintableInstance.balanceOf(bobEthereumAccount));
