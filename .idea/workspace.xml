@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bd1ca04-95b0-4db6-b246-132bdbb7c7f4" name="work" comment="work">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/AztecContracts.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/AllContracts.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/2_deploy_aztec.js" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/2_deploy_all_contracts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/@babel/register/.babel.7.6.2.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/@babel/register/.babel.7.6.2.development.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/testAztecProtocolWithERC20.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/testAztecProtocolWithERC20.js" afterDir="false" />
     </list>
