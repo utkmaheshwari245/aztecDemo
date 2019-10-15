@@ -1,0 +1,220 @@
+{
+  "contractName": "AllContracts",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.4+commit.9549d8ff\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/utkmaheshwari245/Work/Projects/myAztec/contracts/AllContracts.sol\":\"AllContracts\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":500},\"remappings\":[]},\"sources\":{\"/Users/utkmaheshwari245/Work/Projects/myAztec/contracts/AllContracts.sol\":{\"keccak256\":\"0xc1ebe1b08a7de7f0cf37f54be5cdeaeb3a3f417526c8c92a152dcad15d5e78e2\",\"urls\":[\"bzzr://7127d47e2aad8a3e77baf4f720342224589ad8d6b0c5265e4734a0c55671933c\"]},\"@aztec/protocol/contracts/ACE/ACE.sol\":{\"keccak256\":\"0xa5f74acb3e4c278284d44ef6e11b470537260d3d9a94a6fa7b61fb186477ecb4\",\"urls\":[\"bzzr://48fe086b3d49efd624728d5050c37ca17f5962b5557a9ad60d49f2676812d747\"]},\"@aztec/protocol/contracts/ACE/NoteRegistry.sol\":{\"keccak256\":\"0x94c7db807c9b316de5886d134821fdaf539e3480e06e8a9434ec8903076d3f86\",\"urls\":[\"bzzr://498808929c46c420f6a2085fb5d86be827898ba759f8e53072b177aaad8193c8\"]},\"@aztec/protocol/contracts/ACE/validators/joinSplit/JoinSplit.sol\":{\"keccak256\":\"0x8304cf7a8a81cf0084bf4005d677447b4a2c6fe700d4a9b3b431954e58a93396\",\"urls\":[\"bzzr://c748b5f7b5416ef4a8f2b4d5ad6391b25d198e3c398f543e62c154cbef79e9da\"]},\"@aztec/protocol/contracts/ACE/validators/joinSplit/JoinSplitABIEncoder.sol\":{\"keccak256\":\"0xdbb2cfbf88f4499b6134eb0bd167146e923750eb42474df2811c9c71e47d8e5e\",\"urls\":[\"bzzr://2b8b94a4907370caf514febf49d511d589bdfa191a76b7fce175339c9d03c834\"]},\"@aztec/protocol/contracts/ACE/validators/joinSplitFluid/JoinSplitFluid.sol\":{\"keccak256\":\"0x928e098ef8713819008deb70229aca9ef3a23d1d9fde6ccbe824ce1d6d2b3e0c\",\"urls\":[\"bzzr://0ae03d51bb9b251d8c5e74fbaa5bd1e9c414649d44318310dd8b4d3a73002793\"]},\"@aztec/protocol/contracts/ACE/validators/joinSplitFluid/JoinSplitFluidABIEncoder.sol\":{\"keccak256\":\"0xab788f2f01d6e8e85e4793c1dce1d205d07f8139a6dba264b36c2903dc5e4370\",\"urls\":[\"bzzr://c1a9b7761626a5b2247abda838a3fcbbdc8611f8e3b721ad56beda1d1484ef46\"]},\"@aztec/protocol/contracts/ERC1724/ZkAssetMintable.sol\":{\"keccak256\":\"0xd41e21b2ca15c9311b124d424fd726ce041aae061f25e74e5a621210aa11dcd3\",\"urls\":[\"bzzr://ab9a470442040237bd5a3a88cd4b905c36e6eea4ec333e6db98b4ad9e7b7deb2\"]},\"@aztec/protocol/contracts/ERC1724/base/ZkAssetBase.sol\":{\"keccak256\":\"0x1abe9aebc56d2d4d87e0e8e927d3c8dd53051fd90f462f373d5484b1bf2d3c91\",\"urls\":[\"bzzr://5dbea87e55dcf5071c527fcb494b904a3d98a7ca3eb29ce7f53c31d802a033e3\"]},\"@aztec/protocol/contracts/ERC1724/base/ZkAssetMintableBase.sol\":{\"keccak256\":\"0xdbd8059c36d81e20f628ac47eb97a98fbfe1254cb59303f163c678e2d7122e52\",\"urls\":[\"bzzr://3243e8515118540a4ec7682237c4222e710a08ea5363339d12d839b1400bb680\"]},\"@aztec/protocol/contracts/ERC1724/base/ZkAssetOwnableBase.sol\":{\"keccak256\":\"0xbbfef1d70e62eb03452b66c93a6a0333620022cc8ea2757459c5a4414afd4ce0\",\"urls\":[\"bzzr://d2b26e51e1402bc2fbf16e7225d22f5cd8721c3e5f345a711e75c06b36c7bd3a\"]},\"@aztec/protocol/contracts/ERC20/ERC20Mintable.sol\":{\"keccak256\":\"0xa0d397d0a88924cd8acb306642be3fca521e69a145826e5f916ef272c6e8e381\",\"urls\":[\"bzzr://ad5a55a815645594cb4b946d4d85430c40fbb4c926b6e15fc0cd0b19fdf552a1\"]},\"@aztec/protocol/contracts/interfaces/IAZTEC.sol\":{\"keccak256\":\"0xbdaabfc0e82e91c5369a514feb0c64da267cc7af3d040e91dc4afcd34253a0ba\",\"urls\":[\"bzzr://ccace1522655c584b3220a8359c9f01c659232b6bec4ee62201fe1e2cc5c5469\"]},\"@aztec/protocol/contracts/interfaces/IZkAsset.sol\":{\"keccak256\":\"0x7d05bbe65423c3f8d2844a12f131607008d4130916f4aef2e1b471838acb4d63\",\"urls\":[\"bzzr://566d1cc152979de4135912836fea71cdddd92c6e2b391ac111c74b3485c433bc\"]},\"@aztec/protocol/contracts/interfaces/JoinSplitFluidInterface.sol\":{\"keccak256\":\"0x3b22b3b401c1d6dcbba190646c9ba7ee501df0445e57f9839539a4d214068494\",\"urls\":[\"bzzr://c60008f765791ddf2d253cf035847f221f9a9d6af26b9a8cb641d603e5def8a8\"]},\"@aztec/protocol/contracts/interfaces/JoinSplitInterface.sol\":{\"keccak256\":\"0xf1015f43f123f140ef54c23e5c5eec77a79c8330c0e39c11c6bbac5cb9d47aad\",\"urls\":[\"bzzr://d24cd2073a26ef0b6aeb39aa27babf7db03402c8483bc7490ffa2ad147058cd3\"]},\"@aztec/protocol/contracts/libs/LibEIP712.sol\":{\"keccak256\":\"0x105d65fa35288139cf0edb2749373df28800e31727a24c4923abf1eaf16486b0\",\"urls\":[\"bzzr://210a23f95cf0cba1fedc9d2c58f223f089a45fc35416e99fef2a89ee0723caaf\"]},\"@aztec/protocol/contracts/libs/NoteUtils.sol\":{\"keccak256\":\"0x10ff71793eb11637967308474a63033830f86960f28754438ce5073abe52dd2c\",\"urls\":[\"bzzr://0f08d33a2839e9f40eaebe3047adbcd7eb8d0a0d7c2cde433ac8978fbf765fb3\"]},\"@aztec/protocol/contracts/libs/ProofUtils.sol\":{\"keccak256\":\"0xce4dfdc9af28abe040d0ae2fdff1ed32b225623dac56597810f6076204ab2b9b\",\"urls\":[\"bzzr://5284bf722d4353c6f3bdad07ac35271580bbceba7646287bd36d01061c704807\"]},\"@aztec/protocol/contracts/libs/SafeMath8.sol\":{\"keccak256\":\"0x803d6f285fcf450aaf882189dd52c47860ca1f388db767b09c10239872f59d99\",\"urls\":[\"bzzr://cd4012c351b38f431f626bd330421dae25d4d6e36e11267f58a3a63f69951577\"]},\"openzeppelin-solidity/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x4ccf2d7b51873db1ccfd54ca2adae5eac3b184f9699911ed4490438419f1c690\",\"urls\":[\"bzzr://1604f5b6d6e916c154efd8c6720cda069e5ba32dfa0a9dedf2b42e5b02d07f89\"]},\"openzeppelin-solidity/contracts/ownership/Ownable.sol\":{\"keccak256\":\"0xf79fb10e8235770eb4aea7249034076a3cc9f9119ad944fc48705bae9c9d20dc\",\"urls\":[\"bzzr://d12a11272051eb6586de8f7e0a82c04a98c9984ce8b2a6cf1ee439f65aba29a9\"]},\"openzeppelin-solidity/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0x852793a3c2f86d336a683b30d688ec3dcfc57451af5a2bf5975cda3b7191a901\",\"urls\":[\"bzzr://07fb42206812a17c1f71e548cfa5cec6f9aa1ae0ca5df870718ca4aa9759d1a5\"]},\"openzeppelin-solidity/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x90e8c2521653bbb1768b05889c5760031e688d9cd361f167489b89215e201b95\",\"urls\":[\"bzzr://aa8b45b57edafc3d67bc5d916327ea16807fae33f753ca163ae0c4061b789766\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a7230582057f4f83e0bd77a53848614ec954b39faf981b9f2ed95595910099929801d73f30029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a7230582057f4f83e0bd77a53848614ec954b39faf981b9f2ed95595910099929801d73f30029",
+  "sourceMap": "367:25:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;367:25:0;;;;;;;",
+  "deployedSourceMap": "367:25:0:-;;;;;",
+  "source": "pragma solidity >= 0.5.0 <0.7.0;\n\nimport \"@aztec/protocol/contracts/ACE/ACE.sol\";\nimport \"@aztec/protocol/contracts/ACE/validators/joinSplitFluid/JoinSplitFluid.sol\";\nimport \"@aztec/protocol/contracts/ACE/validators/joinSplit/JoinSplit.sol\";\nimport \"@aztec/protocol/contracts/ERC1724/ZkAssetMintable.sol\";\nimport \"@aztec/protocol/contracts/ERC20/ERC20Mintable.sol\";\n\ncontract AllContracts\n{\n}\n",
+  "sourcePath": "/Users/utkmaheshwari245/Work/Projects/myAztec/contracts/AllContracts.sol",
+  "ast": {
+    "absolutePath": "/Users/utkmaheshwari245/Work/Projects/myAztec/contracts/AllContracts.sol",
+    "exportedSymbols": {
+      "AllContracts": [
+        7
+      ]
+    },
+    "id": 8,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:0"
+      },
+      {
+        "absolutePath": "@aztec/protocol/contracts/ACE/ACE.sol",
+        "file": "@aztec/protocol/contracts/ACE/ACE.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 8,
+        "sourceUnit": 796,
+        "src": "34:47:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@aztec/protocol/contracts/ACE/validators/joinSplitFluid/JoinSplitFluid.sol",
+        "file": "@aztec/protocol/contracts/ACE/validators/joinSplitFluid/JoinSplitFluid.sol",
+        "id": 3,
+        "nodeType": "ImportDirective",
+        "scope": 8,
+        "sourceUnit": 1544,
+        "src": "82:84:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@aztec/protocol/contracts/ACE/validators/joinSplit/JoinSplit.sol",
+        "file": "@aztec/protocol/contracts/ACE/validators/joinSplit/JoinSplit.sol",
+        "id": 4,
+        "nodeType": "ImportDirective",
+        "scope": 8,
+        "sourceUnit": 1518,
+        "src": "167:74:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@aztec/protocol/contracts/ERC1724/ZkAssetMintable.sol",
+        "file": "@aztec/protocol/contracts/ERC1724/ZkAssetMintable.sol",
+        "id": 5,
+        "nodeType": "ImportDirective",
+        "scope": 8,
+        "sourceUnit": 1579,
+        "src": "242:63:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@aztec/protocol/contracts/ERC20/ERC20Mintable.sol",
+        "file": "@aztec/protocol/contracts/ERC20/ERC20Mintable.sol",
+        "id": 6,
+        "nodeType": "ImportDirective",
+        "scope": 8,
+        "sourceUnit": 2786,
+        "src": "306:59:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 7,
+        "linearizedBaseContracts": [
+          7
+        ],
+        "name": "AllContracts",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 8,
+        "src": "367:25:0"
+      }
+    ],
+    "src": "0:393:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/utkmaheshwari245/Work/Projects/myAztec/contracts/AllContracts.sol",
+    "exportedSymbols": {
+      "AllContracts": [
+        7
+      ]
+    },
+    "id": 8,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:0"
+      },
+      {
+        "absolutePath": "@aztec/protocol/contracts/ACE/ACE.sol",
+        "file": "@aztec/protocol/contracts/ACE/ACE.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 8,
+        "sourceUnit": 796,
+        "src": "34:47:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@aztec/protocol/contracts/ACE/validators/joinSplitFluid/JoinSplitFluid.sol",
+        "file": "@aztec/protocol/contracts/ACE/validators/joinSplitFluid/JoinSplitFluid.sol",
+        "id": 3,
+        "nodeType": "ImportDirective",
+        "scope": 8,
+        "sourceUnit": 1544,
+        "src": "82:84:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@aztec/protocol/contracts/ACE/validators/joinSplit/JoinSplit.sol",
+        "file": "@aztec/protocol/contracts/ACE/validators/joinSplit/JoinSplit.sol",
+        "id": 4,
+        "nodeType": "ImportDirective",
+        "scope": 8,
+        "sourceUnit": 1518,
+        "src": "167:74:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@aztec/protocol/contracts/ERC1724/ZkAssetMintable.sol",
+        "file": "@aztec/protocol/contracts/ERC1724/ZkAssetMintable.sol",
+        "id": 5,
+        "nodeType": "ImportDirective",
+        "scope": 8,
+        "sourceUnit": 1579,
+        "src": "242:63:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@aztec/protocol/contracts/ERC20/ERC20Mintable.sol",
+        "file": "@aztec/protocol/contracts/ERC20/ERC20Mintable.sol",
+        "id": 6,
+        "nodeType": "ImportDirective",
+        "scope": 8,
+        "sourceUnit": 2786,
+        "src": "306:59:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 7,
+        "linearizedBaseContracts": [
+          7
+        ],
+        "name": "AllContracts",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 8,
+        "src": "367:25:0"
+      }
+    ],
+    "src": "0:393:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.4+commit.9549d8ff.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.16",
+  "updatedAt": "2019-10-15T07:46:35.686Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

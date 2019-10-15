@@ -32,14 +32,14 @@
     "absolutePath": "@aztec/protocol/contracts/ACE/validators/joinSplitFluid/JoinSplitFluid.sol",
     "exportedSymbols": {
       "JoinSplitFluid": [
-        1542
+        1543
       ]
     },
-    "id": 1543,
+    "id": 1544,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1526,
+        "id": 1527,
         "literals": [
           "solidity",
           ">=",
@@ -55,10 +55,10 @@
       {
         "absolutePath": "@aztec/protocol/contracts/ACE/validators/joinSplitFluid/JoinSplitFluidABIEncoder.sol",
         "file": "./JoinSplitFluidABIEncoder.sol",
-        "id": 1527,
+        "id": 1528,
         "nodeType": "ImportDirective",
-        "scope": 1543,
-        "sourceUnit": 1551,
+        "scope": 1544,
+        "sourceUnit": 1552,
         "src": "33:40:6",
         "symbolAliases": [],
         "unitAlias": ""
@@ -66,10 +66,10 @@
       {
         "absolutePath": "@aztec/protocol/contracts/interfaces/JoinSplitFluidInterface.sol",
         "file": "../../../interfaces/JoinSplitFluidInterface.sol",
-        "id": 1528,
+        "id": 1529,
         "nodeType": "ImportDirective",
-        "scope": 1543,
-        "sourceUnit": 2923,
+        "scope": 1544,
+        "sourceUnit": 2924,
         "src": "74:57:6",
         "symbolAliases": [],
         "unitAlias": ""
@@ -77,10 +77,10 @@
       {
         "absolutePath": "@aztec/protocol/contracts/libs/LibEIP712.sol",
         "file": "../../../libs/LibEIP712.sol",
-        "id": 1529,
+        "id": 1530,
         "nodeType": "ImportDirective",
-        "scope": 1543,
-        "sourceUnit": 3041,
+        "scope": 1544,
+        "sourceUnit": 3042,
         "src": "132:37:6",
         "symbolAliases": [],
         "unitAlias": ""
@@ -91,44 +91,44 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1530,
+              "id": 1531,
               "name": "LibEIP712",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3040,
+              "referencedDeclaration": 3041,
               "src": "825:9:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_LibEIP712_$3040",
+                "typeIdentifier": "t_contract$_LibEIP712_$3041",
                 "typeString": "contract LibEIP712"
               }
             },
-            "id": 1531,
+            "id": 1532,
             "nodeType": "InheritanceSpecifier",
             "src": "825:9:6"
           }
         ],
         "contractDependencies": [
-          3040
+          3041
         ],
         "contractKind": "contract",
         "documentation": "@title Library to validate AZTEC zero-knowledge proofs\n@author AZTEC\n@dev Don't include this as an internal library. This contract uses a static memory table to cache\nelliptic curve primitives and hashes.\nCalling this internally from another function will lead to memory mutation and undefined behaviour.\nThe intended use case is to call this externally via `staticcall`.\nExternal calls to OptimizedAZTEC can be treated as pure functions as this contract contains no\nstorage and makes no external calls (other than to precompiles)\nCopyright Spilsbury Holdings Ltd 2019. All rights reserved.*",
         "fullyImplemented": true,
-        "id": 1542,
+        "id": 1543,
         "linearizedBaseContracts": [
-          1542,
-          3040
+          1543,
+          3041
         ],
         "name": "JoinSplitFluid",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 1540,
+              "id": 1541,
               "nodeType": "Block",
               "src": "1463:15917:6",
               "statements": [
                 {
                   "externalReferences": [],
-                  "id": 1534,
+                  "id": 1535,
                   "nodeType": "InlineAssembly",
                   "operations": "{\n    validateJoinSplitFluid()\n    function validateJoinSplitFluid()\n    {\n        mstore(0x80, calldataload(0x44))\n        mstore(0xa0, calldataload(0x64))\n        let notes := add(0x104, calldataload(0x144))\n        let m := 1\n        let n := calldataload(notes)\n        let gen_order := 0x30644e72e131a029b85045b68181585d2833e84879b9709143e1f593f0000001\n        let challenge := mod(calldataload(0x124), gen_order)\n        if gt(m, n)\n        {\n            mstore(0x00, 404)\n            revert(0x00, 0x20)\n        }\n        if eq(m, n)\n        {\n            mstore(0x00, 404)\n            revert(0x00, 0x20)\n        }\n        let kn := 0\n        mstore(0x2a0, calldataload(0x24))\n        mstore(0x2c0, 0)\n        mstore(0x2e0, m)\n        hashCommitments(notes, n)\n        let b := add(0x300, mul(n, 0x80))\n        for {\n            let i := 0\n        }\n        lt(i, n)\n        {\n            i := add(i, 0x01)\n        }\n        {\n            let noteIndex := add(add(notes, 0x20), mul(i, 0xc0))\n            let k\n            let a := calldataload(add(noteIndex, 0x20))\n            let c := challenge\n            switch eq(add(i, 0x01), n)\n            case 1 {\n                k := kn\n            }\n            case 0 {\n                k := calldataload(noteIndex)\n            }\n            validateCommitment(noteIndex, k, a)\n            switch gt(add(i, 0x01), m)\n            case 1 {\n                kn := addmod(kn, sub(gen_order, k), gen_order)\n                let x := mod(mload(0x00), gen_order)\n                k := mulmod(k, x, gen_order)\n                a := mulmod(a, x, gen_order)\n                c := mulmod(challenge, x, gen_order)\n                mstore(0x00, keccak256(0x00, 0x20))\n            }\n            case 0 {\n                kn := addmod(kn, k, gen_order)\n            }\n            calldatacopy(0xe0, add(noteIndex, 0x80), 0x40)\n            calldatacopy(0x20, add(noteIndex, 0x40), 0x40)\n            mstore(0x120, sub(gen_order, c))\n            mstore(0x60, k)\n            mstore(0xc0, a)\n            let result := staticcall(gas(), 7, 0xe0, 0x60, 0x1a0, 0x40)\n            result := and(result, staticcall(gas(), 7, 0x20, 0x60, 0x120, 0x40))\n            result := and(result, staticcall(gas(), 7, 0x80, 0x60, 0x160, 0x40))\n            result := and(result, staticcall(gas(), 6, 0x120, 0x80, 0x160, 0x40))\n            result := and(result, staticcall(gas(), 6, 0x160, 0x80, b, 0x40))\n            if eq(i, m)\n            {\n                mstore(0x260, mload(0x20))\n                mstore(0x280, mload(0x40))\n                mstore(0x1e0, mload(0xe0))\n                mstore(0x200, sub(0x30644e72e131a029b85045b68181585d97816a916871ca8d3c208c16d87cfd47, mload(0x100)))\n            }\n            if gt(i, m)\n            {\n                mstore(0x60, c)\n                result := and(result, staticcall(gas(), 7, 0x20, 0x60, 0x220, 0x40))\n                result := and(result, staticcall(gas(), 6, 0x220, 0x80, 0x260, 0x40))\n                result := and(result, staticcall(gas(), 6, 0x1a0, 0x80, 0x1e0, 0x40))\n            }\n            if iszero(result)\n            {\n                mstore(0x00, 400)\n                revert(0x00, 0x20)\n            }\n            b := add(b, 0x40)\n        }\n        if lt(m, n)\n        {\n            validatePairing(0x84)\n        }\n        let expected := mod(keccak256(0x2a0, sub(b, 0x2a0)), gen_order)\n        if iszero(eq(expected, challenge))\n        {\n            mstore(0x00, 404)\n            revert(0x00, 0x20)\n        }\n    }\n    function validatePairing(t2)\n    {\n        let field_order := 0x30644e72e131a029b85045b68181585d97816a916871ca8d3c208c16d87cfd47\n        let t2_x_1 := calldataload(t2)\n        let t2_x_2 := calldataload(add(t2, 0x20))\n        let t2_y_1 := calldataload(add(t2, 0x40))\n        let t2_y_2 := calldataload(add(t2, 0x60))\n        if or(or(or(or(or(or(or(iszero(t2_x_1), iszero(t2_x_2)), iszero(t2_y_1)), iszero(t2_y_2)), eq(t2_x_1, 0x1800deef121f1e76426a00665e5c4479674322d4f75edadd46debd5cd992f6ed)), eq(t2_x_2, 0x198e9393920d483a7260bfb731fb5d25f1aa493335a9e71297e485b7aef312c2)), eq(t2_y_1, 0x12c85ea5db8c6deb4aab71808dcb408fe3d1e7690c43d37b4ce6cc0166fa7daa)), eq(t2_y_2, 0x90689d0585ff075ec9e99ad690c3395bc4b313370b38ef355acdadcd122975b))\n        {\n            mstore(0x00, 400)\n            revert(0x00, 0x20)\n        }\n        mstore(0x20, mload(0x1e0))\n        mstore(0x40, mload(0x200))\n        mstore(0x80, 0x1800deef121f1e76426a00665e5c4479674322d4f75edadd46debd5cd992f6ed)\n        mstore(0x60, 0x198e9393920d483a7260bfb731fb5d25f1aa493335a9e71297e485b7aef312c2)\n        mstore(0xc0, 0x12c85ea5db8c6deb4aab71808dcb408fe3d1e7690c43d37b4ce6cc0166fa7daa)\n        mstore(0xa0, 0x90689d0585ff075ec9e99ad690c3395bc4b313370b38ef355acdadcd122975b)\n        mstore(0xe0, mload(0x260))\n        mstore(0x100, mload(0x280))\n        mstore(0x140, t2_x_1)\n        mstore(0x120, t2_x_2)\n        mstore(0x180, t2_y_1)\n        mstore(0x160, t2_y_2)\n        let success := staticcall(gas(), 8, 0x20, 0x180, 0x20, 0x20)\n        if or(iszero(success), iszero(mload(0x20)))\n        {\n            mstore(0x00, 400)\n            revert(0x00, 0x20)\n        }\n    }\n    function validateCommitment(note, k, a)\n    {\n        let gen_order := 0x30644e72e131a029b85045b68181585d2833e84879b9709143e1f593f0000001\n        let field_order := 0x30644e72e131a029b85045b68181585d97816a916871ca8d3c208c16d87cfd47\n        let gammaX := calldataload(add(note, 0x40))\n        let gammaY := calldataload(add(note, 0x60))\n        let sigmaX := calldataload(add(note, 0x80))\n        let sigmaY := calldataload(add(note, 0xa0))\n        if iszero(and(and(and(eq(mod(a, gen_order), a), gt(a, 1)), and(eq(mod(k, gen_order), k), gt(k, 1))), and(eq(addmod(mulmod(mulmod(sigmaX, sigmaX, field_order), sigmaX, field_order), 3, field_order), mulmod(sigmaY, sigmaY, field_order)), eq(addmod(mulmod(mulmod(gammaX, gammaX, field_order), gammaX, field_order), 3, field_order), mulmod(gammaY, gammaY, field_order)))))\n        {\n            mstore(0x00, 400)\n            revert(0x00, 0x20)\n        }\n    }\n    function hashCommitments(notes, n)\n    {\n        for {\n            let i := 0\n        }\n        lt(i, n)\n        {\n            i := add(i, 0x01)\n        }\n        {\n            let index := add(add(notes, mul(i, 0xc0)), 0x60)\n            calldatacopy(add(0x300, mul(i, 0x80)), index, 0x80)\n        }\n        mstore(0x00, keccak256(0x300, mul(n, 0x80)))\n    }\n}",
                   "src": "1473:15884:6"
@@ -141,32 +141,32 @@
                       "argumentTypes": [],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1535,
+                        "id": 1536,
                         "name": "JoinSplitFluidABIEncoder",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1550,
+                        "referencedDeclaration": 1551,
                         "src": "17333:24:6",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_JoinSplitFluidABIEncoder_$1550_$",
+                          "typeIdentifier": "t_type$_t_contract$_JoinSplitFluidABIEncoder_$1551_$",
                           "typeString": "type(library JoinSplitFluidABIEncoder)"
                         }
                       },
-                      "id": 1537,
+                      "id": 1538,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "encodeAndExit",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1549,
+                      "referencedDeclaration": 1550,
                       "src": "17333:38:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$__$returns$__$",
                         "typeString": "function () pure"
                       }
                     },
-                    "id": 1538,
+                    "id": 1539,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -180,39 +180,39 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1539,
+                  "id": 1540,
                   "nodeType": "ExpressionStatement",
                   "src": "17333:40:6"
                 }
               ]
             },
             "documentation": "@dev AZTEC will take any transaction sent to it and attempt to validate a zero knowledge proof.\nIf the proof is not valid, the transaction throws.\n@notice See AZTECInterface for how method calls should be constructed.\n'Cost' of raw elliptic curve primitives for a transaction:\n260,700 gas + (124,500 * number of input notes) + (167,600 * number of output notes).\nFor a basic 'JoinSplitFluid' with 2 inputs and 2 outputs = 844,900 gas.\nAZTEC is written in YUL to enable manual memory management and for other efficiency savings.*",
-            "id": 1541,
+            "id": 1542,
             "implemented": true,
             "kind": "fallback",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1532,
+              "id": 1533,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1443:2:6"
             },
             "returnParameters": {
-              "id": 1533,
+              "id": 1534,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1463:0:6"
             },
-            "scope": 1542,
+            "scope": 1543,
             "src": "1435:15945:6",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 1543,
+        "scope": 1544,
         "src": "798:16584:6"
       }
     ],
@@ -222,14 +222,14 @@
     "absolutePath": "@aztec/protocol/contracts/ACE/validators/joinSplitFluid/JoinSplitFluid.sol",
     "exportedSymbols": {
       "JoinSplitFluid": [
-        1542
+        1543
       ]
     },
-    "id": 1543,
+    "id": 1544,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1526,
+        "id": 1527,
         "literals": [
           "solidity",
           ">=",
@@ -245,10 +245,10 @@
       {
         "absolutePath": "@aztec/protocol/contracts/ACE/validators/joinSplitFluid/JoinSplitFluidABIEncoder.sol",
         "file": "./JoinSplitFluidABIEncoder.sol",
-        "id": 1527,
+        "id": 1528,
         "nodeType": "ImportDirective",
-        "scope": 1543,
-        "sourceUnit": 1551,
+        "scope": 1544,
+        "sourceUnit": 1552,
         "src": "33:40:6",
         "symbolAliases": [],
         "unitAlias": ""
@@ -256,10 +256,10 @@
       {
         "absolutePath": "@aztec/protocol/contracts/interfaces/JoinSplitFluidInterface.sol",
         "file": "../../../interfaces/JoinSplitFluidInterface.sol",
-        "id": 1528,
+        "id": 1529,
         "nodeType": "ImportDirective",
-        "scope": 1543,
-        "sourceUnit": 2923,
+        "scope": 1544,
+        "sourceUnit": 2924,
         "src": "74:57:6",
         "symbolAliases": [],
         "unitAlias": ""
@@ -267,10 +267,10 @@
       {
         "absolutePath": "@aztec/protocol/contracts/libs/LibEIP712.sol",
         "file": "../../../libs/LibEIP712.sol",
-        "id": 1529,
+        "id": 1530,
         "nodeType": "ImportDirective",
-        "scope": 1543,
-        "sourceUnit": 3041,
+        "scope": 1544,
+        "sourceUnit": 3042,
         "src": "132:37:6",
         "symbolAliases": [],
         "unitAlias": ""
@@ -281,44 +281,44 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1530,
+              "id": 1531,
               "name": "LibEIP712",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3040,
+              "referencedDeclaration": 3041,
               "src": "825:9:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_LibEIP712_$3040",
+                "typeIdentifier": "t_contract$_LibEIP712_$3041",
                 "typeString": "contract LibEIP712"
               }
             },
-            "id": 1531,
+            "id": 1532,
             "nodeType": "InheritanceSpecifier",
             "src": "825:9:6"
           }
         ],
         "contractDependencies": [
-          3040
+          3041
         ],
         "contractKind": "contract",
         "documentation": "@title Library to validate AZTEC zero-knowledge proofs\n@author AZTEC\n@dev Don't include this as an internal library. This contract uses a static memory table to cache\nelliptic curve primitives and hashes.\nCalling this internally from another function will lead to memory mutation and undefined behaviour.\nThe intended use case is to call this externally via `staticcall`.\nExternal calls to OptimizedAZTEC can be treated as pure functions as this contract contains no\nstorage and makes no external calls (other than to precompiles)\nCopyright Spilsbury Holdings Ltd 2019. All rights reserved.*",
         "fullyImplemented": true,
-        "id": 1542,
+        "id": 1543,
         "linearizedBaseContracts": [
-          1542,
-          3040
+          1543,
+          3041
         ],
         "name": "JoinSplitFluid",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 1540,
+              "id": 1541,
               "nodeType": "Block",
               "src": "1463:15917:6",
               "statements": [
                 {
                   "externalReferences": [],
-                  "id": 1534,
+                  "id": 1535,
                   "nodeType": "InlineAssembly",
                   "operations": "{\n    validateJoinSplitFluid()\n    function validateJoinSplitFluid()\n    {\n        mstore(0x80, calldataload(0x44))\n        mstore(0xa0, calldataload(0x64))\n        let notes := add(0x104, calldataload(0x144))\n        let m := 1\n        let n := calldataload(notes)\n        let gen_order := 0x30644e72e131a029b85045b68181585d2833e84879b9709143e1f593f0000001\n        let challenge := mod(calldataload(0x124), gen_order)\n        if gt(m, n)\n        {\n            mstore(0x00, 404)\n            revert(0x00, 0x20)\n        }\n        if eq(m, n)\n        {\n            mstore(0x00, 404)\n            revert(0x00, 0x20)\n        }\n        let kn := 0\n        mstore(0x2a0, calldataload(0x24))\n        mstore(0x2c0, 0)\n        mstore(0x2e0, m)\n        hashCommitments(notes, n)\n        let b := add(0x300, mul(n, 0x80))\n        for {\n            let i := 0\n        }\n        lt(i, n)\n        {\n            i := add(i, 0x01)\n        }\n        {\n            let noteIndex := add(add(notes, 0x20), mul(i, 0xc0))\n            let k\n            let a := calldataload(add(noteIndex, 0x20))\n            let c := challenge\n            switch eq(add(i, 0x01), n)\n            case 1 {\n                k := kn\n            }\n            case 0 {\n                k := calldataload(noteIndex)\n            }\n            validateCommitment(noteIndex, k, a)\n            switch gt(add(i, 0x01), m)\n            case 1 {\n                kn := addmod(kn, sub(gen_order, k), gen_order)\n                let x := mod(mload(0x00), gen_order)\n                k := mulmod(k, x, gen_order)\n                a := mulmod(a, x, gen_order)\n                c := mulmod(challenge, x, gen_order)\n                mstore(0x00, keccak256(0x00, 0x20))\n            }\n            case 0 {\n                kn := addmod(kn, k, gen_order)\n            }\n            calldatacopy(0xe0, add(noteIndex, 0x80), 0x40)\n            calldatacopy(0x20, add(noteIndex, 0x40), 0x40)\n            mstore(0x120, sub(gen_order, c))\n            mstore(0x60, k)\n            mstore(0xc0, a)\n            let result := staticcall(gas(), 7, 0xe0, 0x60, 0x1a0, 0x40)\n            result := and(result, staticcall(gas(), 7, 0x20, 0x60, 0x120, 0x40))\n            result := and(result, staticcall(gas(), 7, 0x80, 0x60, 0x160, 0x40))\n            result := and(result, staticcall(gas(), 6, 0x120, 0x80, 0x160, 0x40))\n            result := and(result, staticcall(gas(), 6, 0x160, 0x80, b, 0x40))\n            if eq(i, m)\n            {\n                mstore(0x260, mload(0x20))\n                mstore(0x280, mload(0x40))\n                mstore(0x1e0, mload(0xe0))\n                mstore(0x200, sub(0x30644e72e131a029b85045b68181585d97816a916871ca8d3c208c16d87cfd47, mload(0x100)))\n            }\n            if gt(i, m)\n            {\n                mstore(0x60, c)\n                result := and(result, staticcall(gas(), 7, 0x20, 0x60, 0x220, 0x40))\n                result := and(result, staticcall(gas(), 6, 0x220, 0x80, 0x260, 0x40))\n                result := and(result, staticcall(gas(), 6, 0x1a0, 0x80, 0x1e0, 0x40))\n            }\n            if iszero(result)\n            {\n                mstore(0x00, 400)\n                revert(0x00, 0x20)\n            }\n            b := add(b, 0x40)\n        }\n        if lt(m, n)\n        {\n            validatePairing(0x84)\n        }\n        let expected := mod(keccak256(0x2a0, sub(b, 0x2a0)), gen_order)\n        if iszero(eq(expected, challenge))\n        {\n            mstore(0x00, 404)\n            revert(0x00, 0x20)\n        }\n    }\n    function validatePairing(t2)\n    {\n        let field_order := 0x30644e72e131a029b85045b68181585d97816a916871ca8d3c208c16d87cfd47\n        let t2_x_1 := calldataload(t2)\n        let t2_x_2 := calldataload(add(t2, 0x20))\n        let t2_y_1 := calldataload(add(t2, 0x40))\n        let t2_y_2 := calldataload(add(t2, 0x60))\n        if or(or(or(or(or(or(or(iszero(t2_x_1), iszero(t2_x_2)), iszero(t2_y_1)), iszero(t2_y_2)), eq(t2_x_1, 0x1800deef121f1e76426a00665e5c4479674322d4f75edadd46debd5cd992f6ed)), eq(t2_x_2, 0x198e9393920d483a7260bfb731fb5d25f1aa493335a9e71297e485b7aef312c2)), eq(t2_y_1, 0x12c85ea5db8c6deb4aab71808dcb408fe3d1e7690c43d37b4ce6cc0166fa7daa)), eq(t2_y_2, 0x90689d0585ff075ec9e99ad690c3395bc4b313370b38ef355acdadcd122975b))\n        {\n            mstore(0x00, 400)\n            revert(0x00, 0x20)\n        }\n        mstore(0x20, mload(0x1e0))\n        mstore(0x40, mload(0x200))\n        mstore(0x80, 0x1800deef121f1e76426a00665e5c4479674322d4f75edadd46debd5cd992f6ed)\n        mstore(0x60, 0x198e9393920d483a7260bfb731fb5d25f1aa493335a9e71297e485b7aef312c2)\n        mstore(0xc0, 0x12c85ea5db8c6deb4aab71808dcb408fe3d1e7690c43d37b4ce6cc0166fa7daa)\n        mstore(0xa0, 0x90689d0585ff075ec9e99ad690c3395bc4b313370b38ef355acdadcd122975b)\n        mstore(0xe0, mload(0x260))\n        mstore(0x100, mload(0x280))\n        mstore(0x140, t2_x_1)\n        mstore(0x120, t2_x_2)\n        mstore(0x180, t2_y_1)\n        mstore(0x160, t2_y_2)\n        let success := staticcall(gas(), 8, 0x20, 0x180, 0x20, 0x20)\n        if or(iszero(success), iszero(mload(0x20)))\n        {\n            mstore(0x00, 400)\n            revert(0x00, 0x20)\n        }\n    }\n    function validateCommitment(note, k, a)\n    {\n        let gen_order := 0x30644e72e131a029b85045b68181585d2833e84879b9709143e1f593f0000001\n        let field_order := 0x30644e72e131a029b85045b68181585d97816a916871ca8d3c208c16d87cfd47\n        let gammaX := calldataload(add(note, 0x40))\n        let gammaY := calldataload(add(note, 0x60))\n        let sigmaX := calldataload(add(note, 0x80))\n        let sigmaY := calldataload(add(note, 0xa0))\n        if iszero(and(and(and(eq(mod(a, gen_order), a), gt(a, 1)), and(eq(mod(k, gen_order), k), gt(k, 1))), and(eq(addmod(mulmod(mulmod(sigmaX, sigmaX, field_order), sigmaX, field_order), 3, field_order), mulmod(sigmaY, sigmaY, field_order)), eq(addmod(mulmod(mulmod(gammaX, gammaX, field_order), gammaX, field_order), 3, field_order), mulmod(gammaY, gammaY, field_order)))))\n        {\n            mstore(0x00, 400)\n            revert(0x00, 0x20)\n        }\n    }\n    function hashCommitments(notes, n)\n    {\n        for {\n            let i := 0\n        }\n        lt(i, n)\n        {\n            i := add(i, 0x01)\n        }\n        {\n            let index := add(add(notes, mul(i, 0xc0)), 0x60)\n            calldatacopy(add(0x300, mul(i, 0x80)), index, 0x80)\n        }\n        mstore(0x00, keccak256(0x300, mul(n, 0x80)))\n    }\n}",
                   "src": "1473:15884:6"
@@ -331,32 +331,32 @@
                       "argumentTypes": [],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1535,
+                        "id": 1536,
                         "name": "JoinSplitFluidABIEncoder",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1550,
+                        "referencedDeclaration": 1551,
                         "src": "17333:24:6",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_JoinSplitFluidABIEncoder_$1550_$",
+                          "typeIdentifier": "t_type$_t_contract$_JoinSplitFluidABIEncoder_$1551_$",
                           "typeString": "type(library JoinSplitFluidABIEncoder)"
                         }
                       },
-                      "id": 1537,
+                      "id": 1538,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "encodeAndExit",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1549,
+                      "referencedDeclaration": 1550,
                       "src": "17333:38:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$__$returns$__$",
                         "typeString": "function () pure"
                       }
                     },
-                    "id": 1538,
+                    "id": 1539,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -370,39 +370,39 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1539,
+                  "id": 1540,
                   "nodeType": "ExpressionStatement",
                   "src": "17333:40:6"
                 }
               ]
             },
             "documentation": "@dev AZTEC will take any transaction sent to it and attempt to validate a zero knowledge proof.\nIf the proof is not valid, the transaction throws.\n@notice See AZTECInterface for how method calls should be constructed.\n'Cost' of raw elliptic curve primitives for a transaction:\n260,700 gas + (124,500 * number of input notes) + (167,600 * number of output notes).\nFor a basic 'JoinSplitFluid' with 2 inputs and 2 outputs = 844,900 gas.\nAZTEC is written in YUL to enable manual memory management and for other efficiency savings.*",
-            "id": 1541,
+            "id": 1542,
             "implemented": true,
             "kind": "fallback",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1532,
+              "id": 1533,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1443:2:6"
             },
             "returnParameters": {
-              "id": 1533,
+              "id": 1534,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1463:0:6"
             },
-            "scope": 1542,
+            "scope": 1543,
             "src": "1435:15945:6",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 1543,
+        "scope": 1544,
         "src": "798:16584:6"
       }
     ],
@@ -421,7 +421,7 @@
     }
   },
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-14T15:47:37.384Z",
+  "updatedAt": "2019-10-15T07:47:58.658Z",
   "devdoc": {
     "author": "AZTEC",
     "details": "Don't include this as an internal library. This contract uses a static memory table to cache elliptic curve primitives and hashes. Calling this internally from another function will lead to memory mutation and undefined behaviour. The intended use case is to call this externally via `staticcall`. External calls to OptimizedAZTEC can be treated as pure functions as this contract contains no storage and makes no external calls (other than to precompiles) Copyright Spilsbury Holdings Ltd 2019. All rights reserved.*",

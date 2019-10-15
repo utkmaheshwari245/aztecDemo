@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bd1ca04-95b0-4db6-b246-132bdbb7c7f4" name="work" comment="work">
-      <change afterPath="$PROJECT_DIR$/test/test.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/testAztecProtocolWithERC20.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/work.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/ACE.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/ACE.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/AztecContracts.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/AztecContracts.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/ERC20Mintable.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/ERC20Mintable.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/JoinSplit.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/JoinSplit.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/JoinSplitFluid.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/JoinSplitFluid.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/Migrations.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/Migrations.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/ZkAssetMintable.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/ZkAssetMintable.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/AztecContracts.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/AztecContracts.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/2_deploy_aztec.js" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/2_deploy_aztec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/AztecContracts.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/AllContracts.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/2_deploy_aztec.js" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/2_deploy_all_contracts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/@babel/register/.babel.7.6.2.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/@babel/register/.babel.7.6.2.development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/testAztecProtocol.js" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/testAztecProtocol.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/testAztecProtocolWithERC20.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/testAztecProtocolWithERC20.js" afterDir="false" />
     </list>
     <list id="40b16c46-b0f4-4fcb-9331-d518e0dfe1ac" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,8 +36,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/migrations" />
       <recent name="$PROJECT_DIR$/test" />
+      <recent name="$PROJECT_DIR$/migrations" />
       <recent name="$PROJECT_DIR$/scripts" />
     </key>
     <key name="CopyFile.RECENT_KEYS">

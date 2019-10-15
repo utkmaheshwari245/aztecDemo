@@ -111,14 +111,14 @@
     "absolutePath": "@aztec/protocol/contracts/interfaces/IAZTEC.sol",
     "exportedSymbols": {
       "IAZTEC": [
-        2818
+        2819
       ]
     },
-    "id": 2819,
+    "id": 2820,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2786,
+        "id": 2787,
         "literals": [
           "solidity",
           ">=",
@@ -137,43 +137,43 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2818,
+        "id": 2819,
         "linearizedBaseContracts": [
-          2818
+          2819
         ],
         "name": "IAZTEC",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "IAZTEC.ProofCategory",
-            "id": 2792,
+            "id": 2793,
             "members": [
               {
-                "id": 2787,
+                "id": 2788,
                 "name": "NULL",
                 "nodeType": "EnumValue",
                 "src": "84:4:13"
               },
               {
-                "id": 2788,
+                "id": 2789,
                 "name": "BALANCED",
                 "nodeType": "EnumValue",
                 "src": "98:8:13"
               },
               {
-                "id": 2789,
+                "id": 2790,
                 "name": "MINT",
                 "nodeType": "EnumValue",
                 "src": "116:4:13"
               },
               {
-                "id": 2790,
+                "id": 2791,
                 "name": "BURN",
                 "nodeType": "EnumValue",
                 "src": "130:4:13"
               },
               {
-                "id": 2791,
+                "id": 2792,
                 "name": "UTILITY",
                 "nodeType": "EnumValue",
                 "src": "144:7:13"
@@ -185,22 +185,22 @@
           },
           {
             "canonicalName": "IAZTEC.NoteStatus",
-            "id": 2796,
+            "id": 2797,
             "members": [
               {
-                "id": 2793,
+                "id": 2794,
                 "name": "DOES_NOT_EXIST",
                 "nodeType": "EnumValue",
                 "src": "189:14:13"
               },
               {
-                "id": 2794,
+                "id": 2795,
                 "name": "UNSPENT",
                 "nodeType": "EnumValue",
                 "src": "213:7:13"
               },
               {
-                "id": 2795,
+                "id": 2796,
                 "name": "SPENT",
                 "nodeType": "EnumValue",
                 "src": "230:5:13"
@@ -212,10 +212,10 @@
           },
           {
             "constant": true,
-            "id": 2799,
+            "id": 2800,
             "name": "JOIN_SPLIT_PROOF",
             "nodeType": "VariableDeclaration",
-            "scope": 2818,
+            "scope": 2819,
             "src": "353:47:13",
             "stateVariable": true,
             "storageLocation": "default",
@@ -224,7 +224,7 @@
               "typeString": "uint24"
             },
             "typeName": {
-              "id": 2797,
+              "id": 2798,
               "name": "uint24",
               "nodeType": "ElementaryTypeName",
               "src": "353:6:13",
@@ -236,7 +236,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3635373933",
-              "id": 2798,
+              "id": 2799,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -255,10 +255,10 @@
           },
           {
             "constant": true,
-            "id": 2802,
+            "id": 2803,
             "name": "MINT_PROOF",
             "nodeType": "VariableDeclaration",
-            "scope": 2818,
+            "scope": 2819,
             "src": "519:41:13",
             "stateVariable": true,
             "storageLocation": "default",
@@ -267,7 +267,7 @@
               "typeString": "uint24"
             },
             "typeName": {
-              "id": 2800,
+              "id": 2801,
               "name": "uint24",
               "nodeType": "ElementaryTypeName",
               "src": "519:6:13",
@@ -279,7 +279,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3636303439",
-              "id": 2801,
+              "id": 2802,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -298,10 +298,10 @@
           },
           {
             "constant": true,
-            "id": 2805,
+            "id": 2806,
             "name": "BURN_PROOF",
             "nodeType": "VariableDeclaration",
-            "scope": 2818,
+            "scope": 2819,
             "src": "679:41:13",
             "stateVariable": true,
             "storageLocation": "default",
@@ -310,7 +310,7 @@
               "typeString": "uint24"
             },
             "typeName": {
-              "id": 2803,
+              "id": 2804,
               "name": "uint24",
               "nodeType": "ElementaryTypeName",
               "src": "679:6:13",
@@ -322,7 +322,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3636333035",
-              "id": 2804,
+              "id": 2805,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -341,10 +341,10 @@
           },
           {
             "constant": true,
-            "id": 2808,
+            "id": 2809,
             "name": "PRIVATE_RANGE_PROOF",
             "nodeType": "VariableDeclaration",
-            "scope": 2818,
+            "scope": 2819,
             "src": "839:50:13",
             "stateVariable": true,
             "storageLocation": "default",
@@ -353,7 +353,7 @@
               "typeString": "uint24"
             },
             "typeName": {
-              "id": 2806,
+              "id": 2807,
               "name": "uint24",
               "nodeType": "ElementaryTypeName",
               "src": "839:6:13",
@@ -365,7 +365,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3636353632",
-              "id": 2807,
+              "id": 2808,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -384,10 +384,10 @@
           },
           {
             "constant": true,
-            "id": 2811,
+            "id": 2812,
             "name": "PUBLIC_RANGE_PROOF",
             "nodeType": "VariableDeclaration",
-            "scope": 2818,
+            "scope": 2819,
             "src": "1008:49:13",
             "stateVariable": true,
             "storageLocation": "default",
@@ -396,7 +396,7 @@
               "typeString": "uint24"
             },
             "typeName": {
-              "id": 2809,
+              "id": 2810,
               "name": "uint24",
               "nodeType": "ElementaryTypeName",
               "src": "1008:6:13",
@@ -408,7 +408,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3636353633",
-              "id": 2810,
+              "id": 2811,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -427,10 +427,10 @@
           },
           {
             "constant": true,
-            "id": 2814,
+            "id": 2815,
             "name": "DIVIDEND_PROOF",
             "nodeType": "VariableDeclaration",
-            "scope": 2818,
+            "scope": 2819,
             "src": "1176:45:13",
             "stateVariable": true,
             "storageLocation": "default",
@@ -439,7 +439,7 @@
               "typeString": "uint24"
             },
             "typeName": {
-              "id": 2812,
+              "id": 2813,
               "name": "uint24",
               "nodeType": "ElementaryTypeName",
               "src": "1176:6:13",
@@ -451,7 +451,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3636353631",
-              "id": 2813,
+              "id": 2814,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -470,10 +470,10 @@
           },
           {
             "constant": true,
-            "id": 2817,
+            "id": 2818,
             "name": "ZERO_VALUE_NOTE_HASH",
             "nodeType": "VariableDeclaration",
-            "scope": 2818,
+            "scope": 2819,
             "src": "1284:113:13",
             "stateVariable": true,
             "storageLocation": "default",
@@ -482,7 +482,7 @@
               "typeString": "bytes32"
             },
             "typeName": {
-              "id": 2815,
+              "id": 2816,
               "name": "bytes32",
               "nodeType": "ElementaryTypeName",
               "src": "1284:7:13",
@@ -494,7 +494,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "307863626334313735323465353262393563343261346334326433353739333834393765336431393965623962346130313339633932353531643430303062633363",
-              "id": 2816,
+              "id": 2817,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -512,7 +512,7 @@
             "visibility": "public"
           }
         ],
-        "scope": 2819,
+        "scope": 2820,
         "src": "33:1367:13"
       }
     ],
@@ -522,14 +522,14 @@
     "absolutePath": "@aztec/protocol/contracts/interfaces/IAZTEC.sol",
     "exportedSymbols": {
       "IAZTEC": [
-        2818
+        2819
       ]
     },
-    "id": 2819,
+    "id": 2820,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2786,
+        "id": 2787,
         "literals": [
           "solidity",
           ">=",
@@ -548,43 +548,43 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2818,
+        "id": 2819,
         "linearizedBaseContracts": [
-          2818
+          2819
         ],
         "name": "IAZTEC",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "IAZTEC.ProofCategory",
-            "id": 2792,
+            "id": 2793,
             "members": [
               {
-                "id": 2787,
+                "id": 2788,
                 "name": "NULL",
                 "nodeType": "EnumValue",
                 "src": "84:4:13"
               },
               {
-                "id": 2788,
+                "id": 2789,
                 "name": "BALANCED",
                 "nodeType": "EnumValue",
                 "src": "98:8:13"
               },
               {
-                "id": 2789,
+                "id": 2790,
                 "name": "MINT",
                 "nodeType": "EnumValue",
                 "src": "116:4:13"
               },
               {
-                "id": 2790,
+                "id": 2791,
                 "name": "BURN",
                 "nodeType": "EnumValue",
                 "src": "130:4:13"
               },
               {
-                "id": 2791,
+                "id": 2792,
                 "name": "UTILITY",
                 "nodeType": "EnumValue",
                 "src": "144:7:13"
@@ -596,22 +596,22 @@
           },
           {
             "canonicalName": "IAZTEC.NoteStatus",
-            "id": 2796,
+            "id": 2797,
             "members": [
               {
-                "id": 2793,
+                "id": 2794,
                 "name": "DOES_NOT_EXIST",
                 "nodeType": "EnumValue",
                 "src": "189:14:13"
               },
               {
-                "id": 2794,
+                "id": 2795,
                 "name": "UNSPENT",
                 "nodeType": "EnumValue",
                 "src": "213:7:13"
               },
               {
-                "id": 2795,
+                "id": 2796,
                 "name": "SPENT",
                 "nodeType": "EnumValue",
                 "src": "230:5:13"
@@ -623,10 +623,10 @@
           },
           {
             "constant": true,
-            "id": 2799,
+            "id": 2800,
             "name": "JOIN_SPLIT_PROOF",
             "nodeType": "VariableDeclaration",
-            "scope": 2818,
+            "scope": 2819,
             "src": "353:47:13",
             "stateVariable": true,
             "storageLocation": "default",
@@ -635,7 +635,7 @@
               "typeString": "uint24"
             },
             "typeName": {
-              "id": 2797,
+              "id": 2798,
               "name": "uint24",
               "nodeType": "ElementaryTypeName",
               "src": "353:6:13",
@@ -647,7 +647,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3635373933",
-              "id": 2798,
+              "id": 2799,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -666,10 +666,10 @@
           },
           {
             "constant": true,
-            "id": 2802,
+            "id": 2803,
             "name": "MINT_PROOF",
             "nodeType": "VariableDeclaration",
-            "scope": 2818,
+            "scope": 2819,
             "src": "519:41:13",
             "stateVariable": true,
             "storageLocation": "default",
@@ -678,7 +678,7 @@
               "typeString": "uint24"
             },
             "typeName": {
-              "id": 2800,
+              "id": 2801,
               "name": "uint24",
               "nodeType": "ElementaryTypeName",
               "src": "519:6:13",
@@ -690,7 +690,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3636303439",
-              "id": 2801,
+              "id": 2802,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -709,10 +709,10 @@
           },
           {
             "constant": true,
-            "id": 2805,
+            "id": 2806,
             "name": "BURN_PROOF",
             "nodeType": "VariableDeclaration",
-            "scope": 2818,
+            "scope": 2819,
             "src": "679:41:13",
             "stateVariable": true,
             "storageLocation": "default",
@@ -721,7 +721,7 @@
               "typeString": "uint24"
             },
             "typeName": {
-              "id": 2803,
+              "id": 2804,
               "name": "uint24",
               "nodeType": "ElementaryTypeName",
               "src": "679:6:13",
@@ -733,7 +733,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3636333035",
-              "id": 2804,
+              "id": 2805,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -752,10 +752,10 @@
           },
           {
             "constant": true,
-            "id": 2808,
+            "id": 2809,
             "name": "PRIVATE_RANGE_PROOF",
             "nodeType": "VariableDeclaration",
-            "scope": 2818,
+            "scope": 2819,
             "src": "839:50:13",
             "stateVariable": true,
             "storageLocation": "default",
@@ -764,7 +764,7 @@
               "typeString": "uint24"
             },
             "typeName": {
-              "id": 2806,
+              "id": 2807,
               "name": "uint24",
               "nodeType": "ElementaryTypeName",
               "src": "839:6:13",
@@ -776,7 +776,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3636353632",
-              "id": 2807,
+              "id": 2808,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -795,10 +795,10 @@
           },
           {
             "constant": true,
-            "id": 2811,
+            "id": 2812,
             "name": "PUBLIC_RANGE_PROOF",
             "nodeType": "VariableDeclaration",
-            "scope": 2818,
+            "scope": 2819,
             "src": "1008:49:13",
             "stateVariable": true,
             "storageLocation": "default",
@@ -807,7 +807,7 @@
               "typeString": "uint24"
             },
             "typeName": {
-              "id": 2809,
+              "id": 2810,
               "name": "uint24",
               "nodeType": "ElementaryTypeName",
               "src": "1008:6:13",
@@ -819,7 +819,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3636353633",
-              "id": 2810,
+              "id": 2811,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -838,10 +838,10 @@
           },
           {
             "constant": true,
-            "id": 2814,
+            "id": 2815,
             "name": "DIVIDEND_PROOF",
             "nodeType": "VariableDeclaration",
-            "scope": 2818,
+            "scope": 2819,
             "src": "1176:45:13",
             "stateVariable": true,
             "storageLocation": "default",
@@ -850,7 +850,7 @@
               "typeString": "uint24"
             },
             "typeName": {
-              "id": 2812,
+              "id": 2813,
               "name": "uint24",
               "nodeType": "ElementaryTypeName",
               "src": "1176:6:13",
@@ -862,7 +862,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3636353631",
-              "id": 2813,
+              "id": 2814,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -881,10 +881,10 @@
           },
           {
             "constant": true,
-            "id": 2817,
+            "id": 2818,
             "name": "ZERO_VALUE_NOTE_HASH",
             "nodeType": "VariableDeclaration",
-            "scope": 2818,
+            "scope": 2819,
             "src": "1284:113:13",
             "stateVariable": true,
             "storageLocation": "default",
@@ -893,7 +893,7 @@
               "typeString": "bytes32"
             },
             "typeName": {
-              "id": 2815,
+              "id": 2816,
               "name": "bytes32",
               "nodeType": "ElementaryTypeName",
               "src": "1284:7:13",
@@ -905,7 +905,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "307863626334313735323465353262393563343261346334326433353739333834393765336431393965623962346130313339633932353531643430303062633363",
-              "id": 2816,
+              "id": 2817,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -923,7 +923,7 @@
             "visibility": "public"
           }
         ],
-        "scope": 2819,
+        "scope": 2820,
         "src": "33:1367:13"
       }
     ],
@@ -935,7 +935,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-11T12:45:24.052Z",
+  "updatedAt": "2019-10-15T07:46:35.723Z",
   "devdoc": {
     "methods": {}
   },

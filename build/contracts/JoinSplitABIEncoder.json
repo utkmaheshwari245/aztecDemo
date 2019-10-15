@@ -12,14 +12,14 @@
     "absolutePath": "@aztec/protocol/contracts/ACE/validators/joinSplit/JoinSplitABIEncoder.sol",
     "exportedSymbols": {
       "JoinSplitABIEncoder": [
-        1524
+        1525
       ]
     },
-    "id": 1525,
+    "id": 1526,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1518,
+        "id": 1519,
         "literals": [
           "solidity",
           ">=",
@@ -38,22 +38,22 @@
         "contractKind": "library",
         "documentation": "@title Library to ABI encode the output of a join-split proof verification operation\n@author AZTEC\n@dev Don't include this as an internal library. This contract uses a static memory table to cache\nelliptic curve primitives and hashes.\nCalling this internally from another function will lead to memory mutation and undefined behaviour.\nThe intended use case is to call this externally via `staticcall`.\nExternal calls to OptimizedAZTEC can be treated as pure functions as this contract contains no\nstorage and makes no external calls (other than to precompiles)\nCopyright Spilsbury Holdings Ltd 2019. All rights reserved.*",
         "fullyImplemented": true,
-        "id": 1524,
+        "id": 1525,
         "linearizedBaseContracts": [
-          1524
+          1525
         ],
         "name": "JoinSplitABIEncoder",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 1522,
+              "id": 1523,
               "nodeType": "Block",
               "src": "1522:9575:5",
               "statements": [
                 {
                   "externalReferences": [],
-                  "id": 1521,
+                  "id": 1522,
                   "nodeType": "InlineAssembly",
                   "operations": "{\n    let notes := add(0x104, calldataload(0x184))\n    let n := calldataload(notes)\n    let m := calldataload(0x124)\n    let inputOwners := add(0x124, calldataload(0x1a4))\n    let outputOwners := add(0x124, calldataload(0x1c4))\n    let metadata := add(0x144, calldataload(0x1e4))\n    mstore(0x1a0, 0x01)\n    mstore(0x1c0, 0x60)\n    mstore(0x200, 0xc0)\n    mstore(0x240, calldataload(0x164))\n    let kPublic := calldataload(sub(add(notes, mul(calldataload(notes), 0xc0)), 0xa0))\n    switch gt(kPublic, 10944121435919637611123202872628637544274182200208017171849102093287904247808)\n    case 1 {\n        mstore(0x260, sub(kPublic, 0x30644e72e131a029b85045b68181585d2833e84879b9709143e1f593f0000001))\n    }\n    case 0 {\n        mstore(0x260, kPublic)\n    }\n    mstore(0x280, calldataload(0x144))\n    let inputPtr := 0x2a0\n    mstore(add(inputPtr, 0x20), m)\n    let s := add(0x2e0, mul(m, 0x20))\n    for {\n        let i := 0\n    }\n    lt(i, m)\n    {\n        i := add(i, 0x01)\n    }\n    {\n        let noteIndex := add(add(notes, 0x20), mul(i, 0xc0))\n        mstore(0x00, 0x01)\n        calldatacopy(0x20, add(noteIndex, 0x40), 0x80)\n        mstore(0xc0, keccak256(0x00, 0xa0))\n        mstore(s, 0xc0)\n        mstore(add(s, 0x20), 0x01)\n        mstore(0xa0, 0x10101)\n        mstore(add(s, 0x40), calldataload(add(inputOwners, mul(i, 0x20))))\n        mstore(add(s, 0x60), mload(0xc0))\n        mstore(add(s, 0x80), 0x40)\n        mstore(add(s, 0xa0), or(calldataload(add(noteIndex, 0x40)), mul(and(calldataload(add(noteIndex, 0x60)), 0x01), 0x8000000000000000000000000000000000000000000000000000000000000000)))\n        mstore(add(s, 0xc0), or(calldataload(add(noteIndex, 0x80)), mul(and(calldataload(add(noteIndex, 0xa0)), 0x01), 0x8000000000000000000000000000000000000000000000000000000000000000)))\n        mstore(add(add(inputPtr, 0x40), mul(i, 0x20)), sub(s, inputPtr))\n        s := add(s, 0xe0)\n    }\n    mstore(inputPtr, sub(sub(s, inputPtr), 0x20))\n    mstore(0x220, add(0xc0, sub(s, inputPtr)))\n    inputPtr := s\n    mstore(add(inputPtr, 0x20), sub(n, m))\n    s := add(s, add(0x40, mul(sub(n, m), 0x20)))\n    for {\n        let i := m\n    }\n    lt(i, n)\n    {\n        i := add(i, 0x01)\n    }\n    {\n        let noteIndex := add(add(notes, 0x20), mul(i, 0xc0))\n        let metadataIndex := calldataload(add(metadata, mul(sub(i, m), 0x20)))\n        let metadataLength := calldataload(add(sub(metadata, 0x40), metadataIndex))\n        mstore(0x00, 0x01)\n        calldatacopy(0x20, add(noteIndex, 0x40), 0x80)\n        mstore(s, add(0xc0, metadataLength))\n        mstore(add(s, 0x20), 0x01)\n        mstore(add(s, 0x40), calldataload(add(outputOwners, mul(sub(i, m), 0x20))))\n        mstore(add(s, 0x60), keccak256(0x00, 0xa0))\n        mstore(add(s, 0x80), add(0x40, metadataLength))\n        mstore(add(s, 0xa0), or(mload(0x20), mul(and(mload(0x40), 0x01), 0x8000000000000000000000000000000000000000000000000000000000000000)))\n        mstore(add(s, 0xc0), or(mload(0x60), mul(and(mload(0x80), 0x01), 0x8000000000000000000000000000000000000000000000000000000000000000)))\n        calldatacopy(add(s, 0xe0), add(metadataIndex, sub(metadata, 0x20)), metadataLength)\n        mstore(add(add(inputPtr, 0x40), mul(sub(i, m), 0x20)), sub(s, inputPtr))\n        s := add(s, add(mload(s), 0x20))\n    }\n    mstore(inputPtr, sub(sub(s, inputPtr), 0x20))\n    let notesLength := sub(s, 0x2a0)\n    mstore(0x1e0, add(0xa0, notesLength))\n    mstore(0x180, add(0x100, notesLength))\n    mstore(0x160, 0x20)\n    return(0x160, add(0x140, notesLength))\n}",
                   "src": "1532:9565:5"
@@ -61,32 +61,32 @@
               ]
             },
             "documentation": "Calldata map\n0x04:0x24      = calldata location of proofData byte array\n0x24:0x44      = message sender\n0x44:0x64      = h_x\n0x64:0x84      = h_y\n0x84:0xa4      = t2_x0\n0xa4:0xc4      = t2_x1\n0xc4:0xe4      = t2_y0\n0xe4:0x104     = t2_y1\n0x104:0x124    = length of proofData byte array\n0x124:0x144    = m\n0x144:0x164    = challenge\n0x164:0x184    = publicOwner\n0x184:0x1a4    = offset in byte array to notes\n0x1a4:0x1c4    = offset in byte array to inputOwners\n0x1c4:0x1e4    = offset in byte array to outputOwners\n0x1e4:0x204    = offset in byte array to metadata",
-            "id": 1523,
+            "id": 1524,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "encodeAndExit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1519,
+              "id": 1520,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1505:2:5"
             },
             "returnParameters": {
-              "id": 1520,
+              "id": 1521,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1522:0:5"
             },
-            "scope": 1524,
+            "scope": 1525,
             "src": "1483:9614:5",
             "stateMutability": "pure",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 1525,
+        "scope": 1526,
         "src": "690:10409:5"
       }
     ],
@@ -96,14 +96,14 @@
     "absolutePath": "@aztec/protocol/contracts/ACE/validators/joinSplit/JoinSplitABIEncoder.sol",
     "exportedSymbols": {
       "JoinSplitABIEncoder": [
-        1524
+        1525
       ]
     },
-    "id": 1525,
+    "id": 1526,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1518,
+        "id": 1519,
         "literals": [
           "solidity",
           ">=",
@@ -122,22 +122,22 @@
         "contractKind": "library",
         "documentation": "@title Library to ABI encode the output of a join-split proof verification operation\n@author AZTEC\n@dev Don't include this as an internal library. This contract uses a static memory table to cache\nelliptic curve primitives and hashes.\nCalling this internally from another function will lead to memory mutation and undefined behaviour.\nThe intended use case is to call this externally via `staticcall`.\nExternal calls to OptimizedAZTEC can be treated as pure functions as this contract contains no\nstorage and makes no external calls (other than to precompiles)\nCopyright Spilsbury Holdings Ltd 2019. All rights reserved.*",
         "fullyImplemented": true,
-        "id": 1524,
+        "id": 1525,
         "linearizedBaseContracts": [
-          1524
+          1525
         ],
         "name": "JoinSplitABIEncoder",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 1522,
+              "id": 1523,
               "nodeType": "Block",
               "src": "1522:9575:5",
               "statements": [
                 {
                   "externalReferences": [],
-                  "id": 1521,
+                  "id": 1522,
                   "nodeType": "InlineAssembly",
                   "operations": "{\n    let notes := add(0x104, calldataload(0x184))\n    let n := calldataload(notes)\n    let m := calldataload(0x124)\n    let inputOwners := add(0x124, calldataload(0x1a4))\n    let outputOwners := add(0x124, calldataload(0x1c4))\n    let metadata := add(0x144, calldataload(0x1e4))\n    mstore(0x1a0, 0x01)\n    mstore(0x1c0, 0x60)\n    mstore(0x200, 0xc0)\n    mstore(0x240, calldataload(0x164))\n    let kPublic := calldataload(sub(add(notes, mul(calldataload(notes), 0xc0)), 0xa0))\n    switch gt(kPublic, 10944121435919637611123202872628637544274182200208017171849102093287904247808)\n    case 1 {\n        mstore(0x260, sub(kPublic, 0x30644e72e131a029b85045b68181585d2833e84879b9709143e1f593f0000001))\n    }\n    case 0 {\n        mstore(0x260, kPublic)\n    }\n    mstore(0x280, calldataload(0x144))\n    let inputPtr := 0x2a0\n    mstore(add(inputPtr, 0x20), m)\n    let s := add(0x2e0, mul(m, 0x20))\n    for {\n        let i := 0\n    }\n    lt(i, m)\n    {\n        i := add(i, 0x01)\n    }\n    {\n        let noteIndex := add(add(notes, 0x20), mul(i, 0xc0))\n        mstore(0x00, 0x01)\n        calldatacopy(0x20, add(noteIndex, 0x40), 0x80)\n        mstore(0xc0, keccak256(0x00, 0xa0))\n        mstore(s, 0xc0)\n        mstore(add(s, 0x20), 0x01)\n        mstore(0xa0, 0x10101)\n        mstore(add(s, 0x40), calldataload(add(inputOwners, mul(i, 0x20))))\n        mstore(add(s, 0x60), mload(0xc0))\n        mstore(add(s, 0x80), 0x40)\n        mstore(add(s, 0xa0), or(calldataload(add(noteIndex, 0x40)), mul(and(calldataload(add(noteIndex, 0x60)), 0x01), 0x8000000000000000000000000000000000000000000000000000000000000000)))\n        mstore(add(s, 0xc0), or(calldataload(add(noteIndex, 0x80)), mul(and(calldataload(add(noteIndex, 0xa0)), 0x01), 0x8000000000000000000000000000000000000000000000000000000000000000)))\n        mstore(add(add(inputPtr, 0x40), mul(i, 0x20)), sub(s, inputPtr))\n        s := add(s, 0xe0)\n    }\n    mstore(inputPtr, sub(sub(s, inputPtr), 0x20))\n    mstore(0x220, add(0xc0, sub(s, inputPtr)))\n    inputPtr := s\n    mstore(add(inputPtr, 0x20), sub(n, m))\n    s := add(s, add(0x40, mul(sub(n, m), 0x20)))\n    for {\n        let i := m\n    }\n    lt(i, n)\n    {\n        i := add(i, 0x01)\n    }\n    {\n        let noteIndex := add(add(notes, 0x20), mul(i, 0xc0))\n        let metadataIndex := calldataload(add(metadata, mul(sub(i, m), 0x20)))\n        let metadataLength := calldataload(add(sub(metadata, 0x40), metadataIndex))\n        mstore(0x00, 0x01)\n        calldatacopy(0x20, add(noteIndex, 0x40), 0x80)\n        mstore(s, add(0xc0, metadataLength))\n        mstore(add(s, 0x20), 0x01)\n        mstore(add(s, 0x40), calldataload(add(outputOwners, mul(sub(i, m), 0x20))))\n        mstore(add(s, 0x60), keccak256(0x00, 0xa0))\n        mstore(add(s, 0x80), add(0x40, metadataLength))\n        mstore(add(s, 0xa0), or(mload(0x20), mul(and(mload(0x40), 0x01), 0x8000000000000000000000000000000000000000000000000000000000000000)))\n        mstore(add(s, 0xc0), or(mload(0x60), mul(and(mload(0x80), 0x01), 0x8000000000000000000000000000000000000000000000000000000000000000)))\n        calldatacopy(add(s, 0xe0), add(metadataIndex, sub(metadata, 0x20)), metadataLength)\n        mstore(add(add(inputPtr, 0x40), mul(sub(i, m), 0x20)), sub(s, inputPtr))\n        s := add(s, add(mload(s), 0x20))\n    }\n    mstore(inputPtr, sub(sub(s, inputPtr), 0x20))\n    let notesLength := sub(s, 0x2a0)\n    mstore(0x1e0, add(0xa0, notesLength))\n    mstore(0x180, add(0x100, notesLength))\n    mstore(0x160, 0x20)\n    return(0x160, add(0x140, notesLength))\n}",
                   "src": "1532:9565:5"
@@ -145,32 +145,32 @@
               ]
             },
             "documentation": "Calldata map\n0x04:0x24      = calldata location of proofData byte array\n0x24:0x44      = message sender\n0x44:0x64      = h_x\n0x64:0x84      = h_y\n0x84:0xa4      = t2_x0\n0xa4:0xc4      = t2_x1\n0xc4:0xe4      = t2_y0\n0xe4:0x104     = t2_y1\n0x104:0x124    = length of proofData byte array\n0x124:0x144    = m\n0x144:0x164    = challenge\n0x164:0x184    = publicOwner\n0x184:0x1a4    = offset in byte array to notes\n0x1a4:0x1c4    = offset in byte array to inputOwners\n0x1c4:0x1e4    = offset in byte array to outputOwners\n0x1e4:0x204    = offset in byte array to metadata",
-            "id": 1523,
+            "id": 1524,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "encodeAndExit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1519,
+              "id": 1520,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1505:2:5"
             },
             "returnParameters": {
-              "id": 1520,
+              "id": 1521,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1522:0:5"
             },
-            "scope": 1524,
+            "scope": 1525,
             "src": "1483:9614:5",
             "stateMutability": "pure",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 1525,
+        "scope": 1526,
         "src": "690:10409:5"
       }
     ],
@@ -182,7 +182,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-11T12:45:24.005Z",
+  "updatedAt": "2019-10-15T07:46:35.705Z",
   "devdoc": {
     "author": "AZTEC",
     "details": "Don't include this as an internal library. This contract uses a static memory table to cache elliptic curve primitives and hashes. Calling this internally from another function will lead to memory mutation and undefined behaviour. The intended use case is to call this externally via `staticcall`. External calls to OptimizedAZTEC can be treated as pure functions as this contract contains no storage and makes no external calls (other than to precompiles) Copyright Spilsbury Holdings Ltd 2019. All rights reserved.*",

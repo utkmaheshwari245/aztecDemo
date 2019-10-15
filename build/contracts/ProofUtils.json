@@ -12,14 +12,14 @@
     "absolutePath": "@aztec/protocol/contracts/libs/ProofUtils.sol",
     "exportedSymbols": {
       "ProofUtils": [
-        3138
+        3139
       ]
     },
-    "id": 3139,
+    "id": 3140,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3119,
+        "id": 3120,
         "literals": [
           "solidity",
           ">=",
@@ -38,16 +38,16 @@
         "contractKind": "library",
         "documentation": "@title Library of proof utility functions\n@author AZTEC\nCopyright Spilsbury Holdings Ltd 2019. All rights reserved.*",
         "fullyImplemented": true,
-        "id": 3138,
+        "id": 3139,
         "linearizedBaseContracts": [
-          3138
+          3139
         ],
         "name": "ProofUtils",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 3136,
+              "id": 3137,
               "nodeType": "Block",
               "src": "592:214:19",
               "statements": [
@@ -55,7 +55,7 @@
                   "externalReferences": [
                     {
                       "id": {
-                        "declaration": 3128,
+                        "declaration": 3129,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "625:2:19",
@@ -64,7 +64,7 @@
                     },
                     {
                       "category": {
-                        "declaration": 3126,
+                        "declaration": 3127,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "660:8:19",
@@ -73,7 +73,7 @@
                     },
                     {
                       "epoch": {
-                        "declaration": 3124,
+                        "declaration": 3125,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "713:5:19",
@@ -82,7 +82,7 @@
                     },
                     {
                       "proof": {
-                        "declaration": 3121,
+                        "declaration": 3122,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "635:5:19",
@@ -91,7 +91,7 @@
                     },
                     {
                       "proof": {
-                        "declaration": 3121,
+                        "declaration": 3122,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "680:5:19",
@@ -100,7 +100,7 @@
                     },
                     {
                       "proof": {
-                        "declaration": 3121,
+                        "declaration": 3122,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "730:5:19",
@@ -108,7 +108,7 @@
                       }
                     }
                   ],
-                  "id": 3130,
+                  "id": 3131,
                   "nodeType": "InlineAssembly",
                   "operations": "{\n    id := and(proof, 0xff)\n    category := and(div(proof, 0x100), 0xff)\n    epoch := and(div(proof, 0x10000), 0xff)\n}",
                   "src": "602:175:19"
@@ -119,11 +119,11 @@
                     "components": [
                       {
                         "argumentTypes": null,
-                        "id": 3131,
+                        "id": 3132,
                         "name": "epoch",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3124,
+                        "referencedDeclaration": 3125,
                         "src": "779:5:19",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint8",
@@ -132,11 +132,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 3132,
+                        "id": 3133,
                         "name": "category",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3126,
+                        "referencedDeclaration": 3127,
                         "src": "786:8:19",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint8",
@@ -145,11 +145,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 3133,
+                        "id": 3134,
                         "name": "id",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3128,
+                        "referencedDeclaration": 3129,
                         "src": "796:2:19",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint8",
@@ -157,7 +157,7 @@
                         }
                       }
                     ],
-                    "id": 3134,
+                    "id": 3135,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -170,30 +170,30 @@
                       "typeString": "tuple(uint8,uint8,uint8)"
                     }
                   },
-                  "functionReturnParameters": 3129,
-                  "id": 3135,
+                  "functionReturnParameters": 3130,
+                  "id": 3136,
                   "nodeType": "Return",
                   "src": "771:28:19"
                 }
               ]
             },
             "documentation": "@dev We compress three uint8 numbers into only one uint24 to save gas.\nReverts if the category is not one of [1, 2, 3, 4].\n@param proof The compressed uint24 number.\n@return A tuple (uint8, uint8, uint8) representing the epoch, category and proofId.",
-            "id": 3137,
+            "id": 3138,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getProofComponents",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3122,
+              "id": 3123,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3121,
+                  "id": 3122,
                   "name": "proof",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3137,
+                  "scope": 3138,
                   "src": "516:12:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -202,7 +202,7 @@
                     "typeString": "uint24"
                   },
                   "typeName": {
-                    "id": 3120,
+                    "id": 3121,
                     "name": "uint24",
                     "nodeType": "ElementaryTypeName",
                     "src": "516:6:19",
@@ -218,15 +218,15 @@
               "src": "515:14:19"
             },
             "returnParameters": {
-              "id": 3129,
+              "id": 3130,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3124,
+                  "id": 3125,
                   "name": "epoch",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3137,
+                  "scope": 3138,
                   "src": "553:11:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -235,7 +235,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 3123,
+                    "id": 3124,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "553:5:19",
@@ -249,10 +249,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3126,
+                  "id": 3127,
                   "name": "category",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3137,
+                  "scope": 3138,
                   "src": "566:14:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -261,7 +261,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 3125,
+                    "id": 3126,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "566:5:19",
@@ -275,10 +275,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3128,
+                  "id": 3129,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3137,
+                  "scope": 3138,
                   "src": "582:8:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -287,7 +287,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 3127,
+                    "id": 3128,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "582:5:19",
@@ -302,14 +302,14 @@
               ],
               "src": "552:39:19"
             },
-            "scope": 3138,
+            "scope": 3139,
             "src": "488:318:19",
             "stateMutability": "pure",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 3139,
+        "scope": 3140,
         "src": "168:640:19"
       }
     ],
@@ -319,14 +319,14 @@
     "absolutePath": "@aztec/protocol/contracts/libs/ProofUtils.sol",
     "exportedSymbols": {
       "ProofUtils": [
-        3138
+        3139
       ]
     },
-    "id": 3139,
+    "id": 3140,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3119,
+        "id": 3120,
         "literals": [
           "solidity",
           ">=",
@@ -345,16 +345,16 @@
         "contractKind": "library",
         "documentation": "@title Library of proof utility functions\n@author AZTEC\nCopyright Spilsbury Holdings Ltd 2019. All rights reserved.*",
         "fullyImplemented": true,
-        "id": 3138,
+        "id": 3139,
         "linearizedBaseContracts": [
-          3138
+          3139
         ],
         "name": "ProofUtils",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 3136,
+              "id": 3137,
               "nodeType": "Block",
               "src": "592:214:19",
               "statements": [
@@ -362,7 +362,7 @@
                   "externalReferences": [
                     {
                       "id": {
-                        "declaration": 3128,
+                        "declaration": 3129,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "625:2:19",
@@ -371,7 +371,7 @@
                     },
                     {
                       "category": {
-                        "declaration": 3126,
+                        "declaration": 3127,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "660:8:19",
@@ -380,7 +380,7 @@
                     },
                     {
                       "epoch": {
-                        "declaration": 3124,
+                        "declaration": 3125,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "713:5:19",
@@ -389,7 +389,7 @@
                     },
                     {
                       "proof": {
-                        "declaration": 3121,
+                        "declaration": 3122,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "635:5:19",
@@ -398,7 +398,7 @@
                     },
                     {
                       "proof": {
-                        "declaration": 3121,
+                        "declaration": 3122,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "680:5:19",
@@ -407,7 +407,7 @@
                     },
                     {
                       "proof": {
-                        "declaration": 3121,
+                        "declaration": 3122,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "730:5:19",
@@ -415,7 +415,7 @@
                       }
                     }
                   ],
-                  "id": 3130,
+                  "id": 3131,
                   "nodeType": "InlineAssembly",
                   "operations": "{\n    id := and(proof, 0xff)\n    category := and(div(proof, 0x100), 0xff)\n    epoch := and(div(proof, 0x10000), 0xff)\n}",
                   "src": "602:175:19"
@@ -426,11 +426,11 @@
                     "components": [
                       {
                         "argumentTypes": null,
-                        "id": 3131,
+                        "id": 3132,
                         "name": "epoch",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3124,
+                        "referencedDeclaration": 3125,
                         "src": "779:5:19",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint8",
@@ -439,11 +439,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 3132,
+                        "id": 3133,
                         "name": "category",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3126,
+                        "referencedDeclaration": 3127,
                         "src": "786:8:19",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint8",
@@ -452,11 +452,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 3133,
+                        "id": 3134,
                         "name": "id",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3128,
+                        "referencedDeclaration": 3129,
                         "src": "796:2:19",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint8",
@@ -464,7 +464,7 @@
                         }
                       }
                     ],
-                    "id": 3134,
+                    "id": 3135,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -477,30 +477,30 @@
                       "typeString": "tuple(uint8,uint8,uint8)"
                     }
                   },
-                  "functionReturnParameters": 3129,
-                  "id": 3135,
+                  "functionReturnParameters": 3130,
+                  "id": 3136,
                   "nodeType": "Return",
                   "src": "771:28:19"
                 }
               ]
             },
             "documentation": "@dev We compress three uint8 numbers into only one uint24 to save gas.\nReverts if the category is not one of [1, 2, 3, 4].\n@param proof The compressed uint24 number.\n@return A tuple (uint8, uint8, uint8) representing the epoch, category and proofId.",
-            "id": 3137,
+            "id": 3138,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getProofComponents",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3122,
+              "id": 3123,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3121,
+                  "id": 3122,
                   "name": "proof",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3137,
+                  "scope": 3138,
                   "src": "516:12:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -509,7 +509,7 @@
                     "typeString": "uint24"
                   },
                   "typeName": {
-                    "id": 3120,
+                    "id": 3121,
                     "name": "uint24",
                     "nodeType": "ElementaryTypeName",
                     "src": "516:6:19",
@@ -525,15 +525,15 @@
               "src": "515:14:19"
             },
             "returnParameters": {
-              "id": 3129,
+              "id": 3130,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3124,
+                  "id": 3125,
                   "name": "epoch",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3137,
+                  "scope": 3138,
                   "src": "553:11:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -542,7 +542,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 3123,
+                    "id": 3124,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "553:5:19",
@@ -556,10 +556,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3126,
+                  "id": 3127,
                   "name": "category",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3137,
+                  "scope": 3138,
                   "src": "566:14:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -568,7 +568,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 3125,
+                    "id": 3126,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "566:5:19",
@@ -582,10 +582,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3128,
+                  "id": 3129,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3137,
+                  "scope": 3138,
                   "src": "582:8:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -594,7 +594,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 3127,
+                    "id": 3128,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "582:5:19",
@@ -609,14 +609,14 @@
               ],
               "src": "552:39:19"
             },
-            "scope": 3138,
+            "scope": 3139,
             "src": "488:318:19",
             "stateMutability": "pure",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 3139,
+        "scope": 3140,
         "src": "168:640:19"
       }
     ],
@@ -628,7 +628,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-11T12:45:24.064Z",
+  "updatedAt": "2019-10-15T07:46:35.729Z",
   "devdoc": {
     "author": "AZTEC Copyright Spilsbury Holdings Ltd 2019. All rights reserved.*",
     "methods": {},

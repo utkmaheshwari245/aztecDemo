@@ -12,14 +12,14 @@
     "absolutePath": "@aztec/protocol/contracts/ACE/validators/joinSplitFluid/JoinSplitFluidABIEncoder.sol",
     "exportedSymbols": {
       "JoinSplitFluidABIEncoder": [
-        1550
+        1551
       ]
     },
-    "id": 1551,
+    "id": 1552,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1544,
+        "id": 1545,
         "literals": [
           "solidity",
           ">=",
@@ -38,22 +38,22 @@
         "contractKind": "library",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1550,
+        "id": 1551,
         "linearizedBaseContracts": [
-          1550
+          1551
         ],
         "name": "JoinSplitFluidABIEncoder",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 1548,
+              "id": 1549,
               "nodeType": "Block",
               "src": "751:13423:7",
               "statements": [
                 {
                   "externalReferences": [],
-                  "id": 1547,
+                  "id": 1548,
                   "nodeType": "InlineAssembly",
                   "operations": "{\n    let notes := add(0x104, calldataload(0x144))\n    let n := calldataload(notes)\n    let inputOwners := add(0x124, calldataload(0x164))\n    let outputOwners := add(0x124, calldataload(0x184))\n    let metadata := add(0x144, calldataload(0x1a4))\n    mstore(0x1a0, 0x02)\n    mstore(0x1c0, 0x80)\n    mstore(0x220, 0xc0)\n    mstore(0x260, 0x00)\n    mstore(0x280, 0x00)\n    mstore(0x2a0, calldataload(0x124))\n    mstore(0x2e0, 0x01)\n    mstore(0x300, 0x60)\n    let metadataIndex := calldataload(metadata)\n    let metadataLength := calldataload(add(metadataIndex, sub(metadata, 0x40)))\n    mstore(0x00, 0x01)\n    calldatacopy(0x20, add(notes, 0x120), 0x80)\n    mstore(0x320, add(0xc0, metadataLength))\n    mstore(0x340, 0x01)\n    mstore(0x360, calldataload(outputOwners))\n    mstore(0x380, keccak256(0x00, 0xa0))\n    mstore(0x3a0, add(0x40, metadataLength))\n    mstore(0x3c0, or(mload(0x20), shl(255, and(mload(0x40), 0x01))))\n    mstore(0x3e0, or(mload(0x60), shl(255, and(mload(0x80), 0x01))))\n    calldatacopy(0x400, add(metadataIndex, sub(metadata, 0x20)), metadataLength)\n    mstore(0x240, add(0x200, metadataLength))\n    mstore(0x2c0, add(0x120, metadataLength))\n    mstore(add(0x400, metadataLength), 0x120)\n    mstore(add(0x420, metadataLength), 0x01)\n    mstore(add(0x440, metadataLength), 0x60)\n    calldatacopy(0x20, add(notes, 0x60), 0x80)\n    mstore(add(0x460, metadataLength), 0xc0)\n    mstore(add(0x480, metadataLength), 0x01)\n    mstore(add(0x4a0, metadataLength), calldataload(inputOwners))\n    mstore(add(0x4c0, metadataLength), keccak256(0x00, 0xa0))\n    mstore(add(0x4e0, metadataLength), 0x40)\n    mstore(add(0x500, metadataLength), or(mload(0x20), shl(255, and(mload(0x40), 0x01))))\n    mstore(add(0x520, metadataLength), or(mload(0x60), shl(255, and(mload(0x80), 0x01))))\n    mstore(add(0x440, metadataLength), 0x60)\n    let startOfProofOutput := add(0x540, metadataLength)\n    mstore(0x200, add(0x320, metadataLength))\n    mstore(0x1e0, add(0x3c0, metadataLength))\n    let s := startOfProofOutput\n    mstore(add(s, 0x20), 0xc0)\n    mstore(add(s, 0x40), 0x100)\n    mstore(add(s, 0x60), 0x00)\n    mstore(add(s, 0x80), 0x00)\n    mstore(0x20, calldataload(0x124))\n    mstore(add(s, 0xa0), keccak256(0x20, 0x20))\n    mstore(add(s, 0xc0), 0x20)\n    mstore(add(s, 0xe0), 0x00)\n    let notesPtr := add(s, 0x100)\n    mstore(add(notesPtr, 0x20), sub(n, 2))\n    s := add(add(s, 0x140), mul(0x20, sub(n, 2)))\n    for {\n        let i := 0x02\n    }\n    lt(i, n)\n    {\n        i := add(i, 0x01)\n    }\n    {\n        metadataIndex := calldataload(add(metadata, mul(sub(i, 0x01), 0x20)))\n        metadataLength := calldataload(add(sub(metadata, 0x40), metadataIndex))\n        mstore(0x00, 0x01)\n        calldatacopy(0x20, add(add(notes, 0x60), mul(i, 0xc0)), 0x80)\n        mstore(s, add(0xc0, metadataLength))\n        mstore(add(s, 0x20), 0x01)\n        mstore(add(s, 0x40), calldataload(add(outputOwners, mul(sub(i, 0x01), 0x20))))\n        mstore(add(s, 0x60), keccak256(0x00, 0xa0))\n        mstore(add(s, 0x80), add(0x40, metadataLength))\n        mstore(add(s, 0xa0), or(mload(0x20), shl(255, and(mload(0x40), 0x01))))\n        mstore(add(s, 0xc0), or(mload(0x60), shl(255, and(mload(0x80), 0x01))))\n        calldatacopy(add(s, 0xe0), add(metadataIndex, sub(metadata, 0x20)), metadataLength)\n        mstore(add(notesPtr, mul(i, 0x20)), sub(s, notesPtr))\n        s := add(s, add(mload(s), 0x20))\n    }\n    mstore(notesPtr, sub(sub(s, notesPtr), 0x20))\n    let proofOutputLength := sub(s, startOfProofOutput)\n    mstore(startOfProofOutput, sub(proofOutputLength, 0x20))\n    mstore(0x180, sub(s, 0x1a0))\n    mstore(0x160, 0x20)\n    return(0x160, sub(s, 0x160))\n}",
                   "src": "761:13413:7"
@@ -61,32 +61,32 @@
               ]
             },
             "documentation": "Calldata map\n0x04:0x24      = calldata location of proofData byte array\n0x24:0x44      = message sender\n0x44:0x64      = h_x\n0x64:0x84      = h_y\n0x84:0xa4      = t2_x0\n0xa4:0xc4      = t2_x1\n0xc4:0xe4      = t2_y0\n0xe4:0x104     = t2_y1\n0x104:0x124    = length of proofData byte array\n0x124:0x144    = challenge\n0x144:0x164    = offset in byte array to notes\n0x164:0x184    = offset in byte array to inputOwners\n0x184:0x1a4    = offset in byte array to outputOwners\n0x1a4:0x1c4    = offset in byte array to metadata",
-            "id": 1549,
+            "id": 1550,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "encodeAndExit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1545,
+              "id": 1546,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "734:2:7"
             },
             "returnParameters": {
-              "id": 1546,
+              "id": 1547,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "751:0:7"
             },
-            "scope": 1550,
+            "scope": 1551,
             "src": "712:13462:7",
             "stateMutability": "pure",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 1551,
+        "scope": 1552,
         "src": "33:14143:7"
       }
     ],
@@ -96,14 +96,14 @@
     "absolutePath": "@aztec/protocol/contracts/ACE/validators/joinSplitFluid/JoinSplitFluidABIEncoder.sol",
     "exportedSymbols": {
       "JoinSplitFluidABIEncoder": [
-        1550
+        1551
       ]
     },
-    "id": 1551,
+    "id": 1552,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1544,
+        "id": 1545,
         "literals": [
           "solidity",
           ">=",
@@ -122,22 +122,22 @@
         "contractKind": "library",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1550,
+        "id": 1551,
         "linearizedBaseContracts": [
-          1550
+          1551
         ],
         "name": "JoinSplitFluidABIEncoder",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 1548,
+              "id": 1549,
               "nodeType": "Block",
               "src": "751:13423:7",
               "statements": [
                 {
                   "externalReferences": [],
-                  "id": 1547,
+                  "id": 1548,
                   "nodeType": "InlineAssembly",
                   "operations": "{\n    let notes := add(0x104, calldataload(0x144))\n    let n := calldataload(notes)\n    let inputOwners := add(0x124, calldataload(0x164))\n    let outputOwners := add(0x124, calldataload(0x184))\n    let metadata := add(0x144, calldataload(0x1a4))\n    mstore(0x1a0, 0x02)\n    mstore(0x1c0, 0x80)\n    mstore(0x220, 0xc0)\n    mstore(0x260, 0x00)\n    mstore(0x280, 0x00)\n    mstore(0x2a0, calldataload(0x124))\n    mstore(0x2e0, 0x01)\n    mstore(0x300, 0x60)\n    let metadataIndex := calldataload(metadata)\n    let metadataLength := calldataload(add(metadataIndex, sub(metadata, 0x40)))\n    mstore(0x00, 0x01)\n    calldatacopy(0x20, add(notes, 0x120), 0x80)\n    mstore(0x320, add(0xc0, metadataLength))\n    mstore(0x340, 0x01)\n    mstore(0x360, calldataload(outputOwners))\n    mstore(0x380, keccak256(0x00, 0xa0))\n    mstore(0x3a0, add(0x40, metadataLength))\n    mstore(0x3c0, or(mload(0x20), shl(255, and(mload(0x40), 0x01))))\n    mstore(0x3e0, or(mload(0x60), shl(255, and(mload(0x80), 0x01))))\n    calldatacopy(0x400, add(metadataIndex, sub(metadata, 0x20)), metadataLength)\n    mstore(0x240, add(0x200, metadataLength))\n    mstore(0x2c0, add(0x120, metadataLength))\n    mstore(add(0x400, metadataLength), 0x120)\n    mstore(add(0x420, metadataLength), 0x01)\n    mstore(add(0x440, metadataLength), 0x60)\n    calldatacopy(0x20, add(notes, 0x60), 0x80)\n    mstore(add(0x460, metadataLength), 0xc0)\n    mstore(add(0x480, metadataLength), 0x01)\n    mstore(add(0x4a0, metadataLength), calldataload(inputOwners))\n    mstore(add(0x4c0, metadataLength), keccak256(0x00, 0xa0))\n    mstore(add(0x4e0, metadataLength), 0x40)\n    mstore(add(0x500, metadataLength), or(mload(0x20), shl(255, and(mload(0x40), 0x01))))\n    mstore(add(0x520, metadataLength), or(mload(0x60), shl(255, and(mload(0x80), 0x01))))\n    mstore(add(0x440, metadataLength), 0x60)\n    let startOfProofOutput := add(0x540, metadataLength)\n    mstore(0x200, add(0x320, metadataLength))\n    mstore(0x1e0, add(0x3c0, metadataLength))\n    let s := startOfProofOutput\n    mstore(add(s, 0x20), 0xc0)\n    mstore(add(s, 0x40), 0x100)\n    mstore(add(s, 0x60), 0x00)\n    mstore(add(s, 0x80), 0x00)\n    mstore(0x20, calldataload(0x124))\n    mstore(add(s, 0xa0), keccak256(0x20, 0x20))\n    mstore(add(s, 0xc0), 0x20)\n    mstore(add(s, 0xe0), 0x00)\n    let notesPtr := add(s, 0x100)\n    mstore(add(notesPtr, 0x20), sub(n, 2))\n    s := add(add(s, 0x140), mul(0x20, sub(n, 2)))\n    for {\n        let i := 0x02\n    }\n    lt(i, n)\n    {\n        i := add(i, 0x01)\n    }\n    {\n        metadataIndex := calldataload(add(metadata, mul(sub(i, 0x01), 0x20)))\n        metadataLength := calldataload(add(sub(metadata, 0x40), metadataIndex))\n        mstore(0x00, 0x01)\n        calldatacopy(0x20, add(add(notes, 0x60), mul(i, 0xc0)), 0x80)\n        mstore(s, add(0xc0, metadataLength))\n        mstore(add(s, 0x20), 0x01)\n        mstore(add(s, 0x40), calldataload(add(outputOwners, mul(sub(i, 0x01), 0x20))))\n        mstore(add(s, 0x60), keccak256(0x00, 0xa0))\n        mstore(add(s, 0x80), add(0x40, metadataLength))\n        mstore(add(s, 0xa0), or(mload(0x20), shl(255, and(mload(0x40), 0x01))))\n        mstore(add(s, 0xc0), or(mload(0x60), shl(255, and(mload(0x80), 0x01))))\n        calldatacopy(add(s, 0xe0), add(metadataIndex, sub(metadata, 0x20)), metadataLength)\n        mstore(add(notesPtr, mul(i, 0x20)), sub(s, notesPtr))\n        s := add(s, add(mload(s), 0x20))\n    }\n    mstore(notesPtr, sub(sub(s, notesPtr), 0x20))\n    let proofOutputLength := sub(s, startOfProofOutput)\n    mstore(startOfProofOutput, sub(proofOutputLength, 0x20))\n    mstore(0x180, sub(s, 0x1a0))\n    mstore(0x160, 0x20)\n    return(0x160, sub(s, 0x160))\n}",
                   "src": "761:13413:7"
@@ -145,32 +145,32 @@
               ]
             },
             "documentation": "Calldata map\n0x04:0x24      = calldata location of proofData byte array\n0x24:0x44      = message sender\n0x44:0x64      = h_x\n0x64:0x84      = h_y\n0x84:0xa4      = t2_x0\n0xa4:0xc4      = t2_x1\n0xc4:0xe4      = t2_y0\n0xe4:0x104     = t2_y1\n0x104:0x124    = length of proofData byte array\n0x124:0x144    = challenge\n0x144:0x164    = offset in byte array to notes\n0x164:0x184    = offset in byte array to inputOwners\n0x184:0x1a4    = offset in byte array to outputOwners\n0x1a4:0x1c4    = offset in byte array to metadata",
-            "id": 1549,
+            "id": 1550,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "encodeAndExit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1545,
+              "id": 1546,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "734:2:7"
             },
             "returnParameters": {
-              "id": 1546,
+              "id": 1547,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "751:0:7"
             },
-            "scope": 1550,
+            "scope": 1551,
             "src": "712:13462:7",
             "stateMutability": "pure",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 1551,
+        "scope": 1552,
         "src": "33:14143:7"
       }
     ],
@@ -182,7 +182,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-11T12:45:24.015Z",
+  "updatedAt": "2019-10-15T07:46:35.706Z",
   "devdoc": {
     "methods": {}
   },

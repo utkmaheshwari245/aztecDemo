@@ -10,9 +10,9 @@ const ERC20Mintable = artifacts.require('./ERC20Mintable.sol');
 const {proofs : {MINT_PROOF}} = utils;
 const {JoinSplitProof, MintProof} = aztec;
 
-contract('Test Aztec Privacy Protocol', accounts => {
+contract('Test Aztec Privacy Protocol with ERC20 tokens', accounts => {
 
-    it('Simulate Minting and Unilateral Transfer', async() => {
+    it('Test Unilateral Transfer of ERC20 tokens using Aztec protocol', async() => {
         const AceInstance = await Ace.deployed();
         const ZkAssetMintableInstance = await ZkAssetMintable.deployed();
         const ERC20MintableInstance = await ERC20Mintable.deployed();
@@ -21,50 +21,42 @@ contract('Test Aztec Privacy Protocol', accounts => {
         const bob = secp256k1.generateAccount();
         await ERC20MintableInstance.mint(accounts[1], 100);
         await ERC20MintableInstance.mint(accounts[2], 0);
-        await ERC20MintableInstance.approve(AceInstance.address, 100, {from: accounts[1]});
-        console.log('Alice : ' + await ERC20MintableInstance.balanceOf(accounts[1]));
-        console.log('Bob : ' + await ERC20MintableInstance.balanceOf(accounts[2]));
 
-        console.log('Give Alice notes worth 0');
+        console.log('Alice\'s initial balance : ' + await ERC20MintableInstance.balanceOf(accounts[1]));
+        console.log('Bob\'s initial balance : ' + await ERC20MintableInstance.balanceOf(accounts[2]));
+        const amount = 25;
+
+        console.log('Mint Aztec Note worth 0 for Alice');
         const zeroValueNote = await aztec.note.createZeroValueNote();
         const alice0Note = await aztec.note.create(alice.publicKey, 0);
-        const mintProof = new MintProof(zeroValueNote, alice0Note, [alice0Note], ZkAssetMintableInstance.address);
-        const mintData = mintProof.encodeABI();
-        const mint = await ZkAssetMintableInstance.confidentialMint(MINT_PROOF, mintData);
-//        console.log(mint.receipt);
-        console.log('Successfully given notes worth 100 to Alice');
+        const proof1 = new MintProof(zeroValueNote, alice0Note, [alice0Note], ZkAssetMintableInstance.address);
+        const data1 = proof1.encodeABI();
+        await ZkAssetMintableInstance.confidentialMint(MINT_PROOF, data1);
 
-        console.log('Transfer notes worth 25 from Alice to Bob');
-        const alice25Note = await aztec.note.create(alice.publicKey, 25);
-        const sendProof = new JoinSplitProof([alice0Note], [alice25Note], accounts[0], -25, accounts[1]);
-        console.log(sendProof);
-        const temp = await AceInstance.publicApprove(ZkAssetMintableInstance.address, sendProof.hash, 25, {from:accounts[1]});
-        const sendProofData = sendProof.encodeABI(ZkAssetMintableInstance.address);
-        const sendProofSignatures = sendProof.constructSignatures(ZkAssetMintableInstance.address, [alice]);
-        const transfer = await ZkAssetMintableInstance.confidentialTransfer(sendProofData, sendProofSignatures);
-        console.log('Successfully transferred notes worth 25 from Alice to Bob');
+        console.log('Convert Alice\'s ERC20 tokens worth ' + amount + ' to Alice\'s Aztec Note worth ' + amount);
+        const alice25Note = await aztec.note.create(alice.publicKey, amount);
+        const proof2 = new JoinSplitProof([alice0Note], [alice25Note], accounts[0], -amount, accounts[1]);
+        const data2 = proof2.encodeABI(ZkAssetMintableInstance.address);
+        const signatures2 = proof2.constructSignatures(ZkAssetMintableInstance.address, [alice]);
+        await ERC20MintableInstance.approve(AceInstance.address, amount, {from: accounts[1]});
+        await AceInstance.publicApprove(ZkAssetMintableInstance.address, proof2.hash, amount, {from:accounts[1]});
+        await ZkAssetMintableInstance.confidentialTransfer(data2, signatures2);
 
-        console.log('Transfer notes worth 25 from Alice to Bob');
-                const bob25Note = await aztec.note.create(bob.publicKey, 25);
-                const sendProof1 = new JoinSplitProof([alice25Note], [bob25Note], accounts[0], 0, accounts[0]);
-                console.log(sendProof1);
-//                const temp1 = await AceInstance.publicApprove(ZkAssetMintableInstance.address, sendProof.hash, 25, {from:accounts[1]});
-                const sendProofData1 = sendProof1.encodeABI(ZkAssetMintableInstance.address);
-                const sendProofSignatures1 = sendProof1.constructSignatures(ZkAssetMintableInstance.address, [alice]);
-                const transfer1 = await ZkAssetMintableInstance.confidentialTransfer(sendProofData1, sendProofSignatures1);
-                console.log('Successfully transferred notes worth 25 from Alice to Bob');
+        console.log('Convert Alice\'s Aztec Note worth ' + amount + ' to Bob\'s Aztec Note worth ' + amount);
+        const bob25Note = await aztec.note.create(bob.publicKey, amount);
+        const proof3 = new JoinSplitProof([alice25Note], [bob25Note], accounts[0], 0, accounts[0]);
+        const data3 = proof3.encodeABI(ZkAssetMintableInstance.address);
+        const signatures3 = proof3.constructSignatures(ZkAssetMintableInstance.address, [alice]);
+        await ZkAssetMintableInstance.confidentialTransfer(data3, signatures3);
 
-         console.log('Transfer notes worth 25 from Alice to Bob');
-                         const zeroValueNote2 = await aztec.note.create(bob.publicKey, 0);
-                         const sendProof2 = new JoinSplitProof([bob25Note], [zeroValueNote2], accounts[0], 25, accounts[2]);
-                         console.log(sendProof1);
-         //                const temp1 = await AceInstance.publicApprove(ZkAssetMintableInstance.address, sendProof.hash, 25, {from:accounts[1]});
-                         const sendProofData2 = sendProof2.encodeABI(ZkAssetMintableInstance.address);
-                         const sendProofSignatures2 = sendProof2.constructSignatures(ZkAssetMintableInstance.address, [bob]);
-                         const transfer2 = await ZkAssetMintableInstance.confidentialTransfer(sendProofData2, sendProofSignatures2);
-                         console.log('Successfully transferred notes worth 25 from Alice to Bob');
+         console.log('Convert Bob\'s Aztec Note worth ' + amount + ' to Bob\'s ERC20 tokens worth ' + amount);
+         const bob0Note = await aztec.note.create(bob.publicKey, 0);
+         const proof4 = new JoinSplitProof([bob25Note], [bob0Note], accounts[0], amount, accounts[2]);
+         const data4 = proof4.encodeABI(ZkAssetMintableInstance.address);
+         const signatures4 = proof4.constructSignatures(ZkAssetMintableInstance.address, [bob]);
+         await ZkAssetMintableInstance.confidentialTransfer(data4, signatures4);
 
-                         console.log('Alice : ' + await ERC20MintableInstance.balanceOf(accounts[1]));
-                                 console.log('Bob : ' + await ERC20MintableInstance.balanceOf(accounts[2]));
+         console.log('Alice\'s final balance : ' + await ERC20MintableInstance.balanceOf(accounts[1]));
+         console.log('Bob\'s final balance : ' + await ERC20MintableInstance.balanceOf(accounts[2]));
     });
 });
