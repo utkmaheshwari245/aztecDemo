@@ -1,7 +1,7 @@
 {
-  "name": "aztec-ganache-starter-kit",
+  "name": "aztec-demo",
   "version": "1.0.0",
-  "description": "A starter kit to help dApp developers run ganache on a local blockchain",
+  "description": "Aztec Demo",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
@@ -10,8 +10,7 @@
     "@aztec/secp256k1": "1.0.1",
     "aztec.js": "0.14.0-beta.0",
     "openzeppelin-solidity": "^2.2.0",
-    "web3": "^1.0.0-beta.51",
-    "truffle": "^5.0.33"
+    "web3": "^1.0.0-beta.51"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
