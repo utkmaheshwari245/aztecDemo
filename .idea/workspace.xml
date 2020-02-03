@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1bd1ca04-95b0-4db6-b246-132bdbb7c7f4" name="work" comment="work" />
-    <list id="40b16c46-b0f4-4fcb-9331-d518e0dfe1ac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/testNote.js" afterDir="false" />
+    <list default="true" id="1bd1ca04-95b0-4db6-b246-132bdbb7c7f4" name="work" comment="work">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
+    <list id="40b16c46-b0f4-4fcb-9331-d518e0dfe1ac" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
